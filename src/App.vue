@@ -1,10 +1,16 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div>
+      <ani-button @click="testStatus=true">open</ani-button>
+      <ani-button :disable="testStatus" >default</ani-button>
     </div>
-    <router-view/>
+    <div id="nav" style="display: none;">
+      <ani-button size="xs">extra small</ani-button>
+      <ani-button size="sm">small</ani-button>
+      <ani-button size="md">medium</ani-button>
+      <ani-button size="lg">large</ani-button>
+      <ani-button size="xl">extra large</ani-button>
+    </div>
   </div>
 </template>
 
@@ -27,3 +33,14 @@
   }
 }
 </style>
+<script>
+  import AniButton from "./components/AniButton";
+  export default {
+    components: {AniButton},
+    data(){
+      return {
+        testStatus:false
+      }
+    },
+  }
+</script>
