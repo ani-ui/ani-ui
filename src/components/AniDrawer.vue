@@ -1,15 +1,126 @@
 <template>
-  <transition>
-
-  </transition>
+  <div>
+    <transition :name="direction?'slide-fade-'+direction:'slide-fade-left'">
+      <div
+        :style="`height:${innerHeight}px`"
+        class="ani-drawer-style"
+        :class="[
+        direction?'ani-drawer-direction--'+direction:'ani-drawer-direction--left',
+        ]"
+        v-show="drawerOpen"
+      >
+        <div class="ani-drawer-close" @click="handleClickClose">
+          <div class="ani-drawer-close__icon1"></div>
+          <div class="ani-drawer-close__icon2"></div>
+        </div>
+      </div>
+    </transition>
+    <transition name="fade">
+      <div
+        v-show="drawerOpen"
+        class="ani-drawer-cap"
+        :class="[
+        {
+        'is-blur':blur
+        }
+        ]"
+        :style="`height:${innerHeight}px;width:${innerWidth}px;`"
+        @click="handleClickClose"
+      ></div>
+    </transition>
+  </div>
 </template>
 
 <script>
-  export default {
-    name: "AniDrawer"
+export default {
+  mounted() {
+    this.innerHeight = window.innerHeight;
+    this.innerWidth = window.innerWidth;
+    let vthis = this;
+    window.onresize = function() {
+      vthis.innerHeight = window.innerHeight;
+      vthis.innerWidth=window.innerWidth;
+    };
+  },
+  name: "AniDrawer",
+  data() {
+    return {
+      innerHeight: 100,
+      innerWidth:100,
+      drawerNotClosed: true
+    };
+  },
+  props: {
+    drawerOpen: Boolean,
+    blur: Boolean,
+    direction:String  // default left
+  },
+  methods: {
+    handleClickClose() {
+      this.$emit("update:drawerOpen", false);
+    }
   }
+};
 </script>
 
-<style scoped>
+<style>
+.slide-fade-left-enter-active {
+  transition: all 0.1s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-left-leave-active {
+  transition: all 0.1s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-left-enter, .slide-fade-left-leave-to
+    /* .slide-fade-leave-active for below version 2.1.8 */ {
+  transform: translateX(-300px);
+}
+.slide-fade-right-enter-active {
+  transition: all 0.1s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-right-leave-active {
+  transition: all 0.1s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-right-enter, .slide-fade-right-leave-to
+  /* .slide-fade-leave-active for below version 2.1.8 */ {
+  transform: translateX(300px);
+}
+.slide-fade-top-enter-active {
+  transition: all 0.1s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-top-leave-active {
+  transition: all 0.1s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-top-enter, .slide-fade-top-leave-to
+  /* .slide-fade-leave-active for below version 2.1.8 */ {
+  transform: translateY(-300px);
+}
+.slide-fade-bottom-enter-active {
+  transition: all 0.1s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-bottom-leave-active {
+  transition: all 0.1s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-bottom-enter, .slide-fade-bottom-leave-to
+  /* .slide-fade-leave-active for below version 2.1.8 */ {
+  transform: translateY(300px);
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 
+.ani-drawer-cap {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 4;
+  left: 0;
+  top: 0;
+}
+.is-blur {
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
 </style>

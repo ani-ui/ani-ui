@@ -1,23 +1,27 @@
 <template>
   <div id="app">
-    <ani-header title="Ani UI" :link="[{name:'test',href:'#'},{name:'test',href:'#'}]">
+    <ani-drawer :drawer-open.sync="menuOpened" blur direction="right"></ani-drawer>
+    <ani-header :menu-opened-prop.sync="menuOpened" title="Ani UI" :link="[{name:'test',href:'#'},{name:'test2',href:'#'}]" >
     </ani-header>
-    <ani-button>
-      test
-    </ani-button>
   </div>
 </template>
 
 
 <script>
-import AniButton from "./components/AniButton";
 import AniHeader from "./components/AniHeader";
+import AniDrawer from "./components/AniDrawer";
 export default {
-  components: {AniHeader, AniButton },
+  components: {AniDrawer, AniHeader },
   data() {
     return {
-      testStatus: false
+      testStatus: false,
+      menuOpened:false,
     };
+  },
+  watch:{
+    menuOpened(value){
+      window.console.log(value?'menu is opened':'menu not open')
+    }
   }
 };
 </script>
