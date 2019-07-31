@@ -1,8 +1,11 @@
 <template>
   <div id="app">
-    <ani-drawer :drawer-open.sync="menuOpened" blur direction="right"></ani-drawer>
+    <ani-follower></ani-follower>
+    <ani-back-top></ani-back-top>
+    <ani-drawer :drawer-open.sync="menuOpened"></ani-drawer>
     <ani-header :menu-opened-prop.sync="menuOpened" title="Ani UI" :link="[{name:'test',href:'#'},{name:'test2',href:'#'}]" >
     </ani-header>
+    <div style="height: 2000px;"></div>
   </div>
 </template>
 
@@ -10,8 +13,11 @@
 <script>
 import AniHeader from "./components/AniHeader";
 import AniDrawer from "./components/AniDrawer";
+import AniBackTop from "./components/AniBackTop";
+import AniFollower from "./components/AniFollower";
 export default {
-  components: {AniDrawer, AniHeader },
+  components: {AniFollower, AniBackTop, AniDrawer, AniHeader },
+
   data() {
     return {
       testStatus: false,
