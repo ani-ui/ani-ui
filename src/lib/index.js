@@ -1,8 +1,10 @@
-import Vue from 'vue'
+import Vue from "vue";
 import AniButton from "../components/AniButton";
-import "../less/main.less"
-const Components={
+import AniIconText from "../components/AniIconText";
+import "../less/main.less";
+const Components = {
   AniButton,
+  AniIconText,
 };
 Object.keys(Components).forEach(name => {
   Vue.component(name, Components[name]);

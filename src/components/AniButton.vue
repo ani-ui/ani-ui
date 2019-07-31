@@ -3,16 +3,15 @@
     @click="handleClick"
     class="ani-button-default-style"
     :class="[
-    size ? 'ani-button--' + size : '',
-    transparent?'ani-button--transparent':'',
-    {
-      'is-round':round,
-      'is-circle':circle,
-      'is-disable':disable
-    }
+      size ? 'ani-button--' + size : '',
+      transparent ? 'ani-button--transparent' : '',
+      {
+        'is-round': round,
+        'is-circle': circle,
+        'is-disable': disable,
+      }
     ]"
   >
-    <slot name="icon"></slot>
     <slot></slot>
   </button>
 </template>
@@ -22,16 +21,16 @@ export default {
   name: "AniButton",
   methods: {
     handleClick(evt) {
-      if(!this.disable)this.$emit("click", evt);
+      if (!this.disable) this.$emit("click", evt);
     }
   },
   props: {
     size: String,
-    transparent:Boolean,
-    round:Boolean,
-    circle:Boolean,
-    disable:Boolean
-  }
+    transparent: Boolean,
+    round: Boolean,
+    circle: Boolean,
+    disable: Boolean,
+  },
 };
 </script>
 
@@ -45,12 +44,12 @@ export default {
   background-color: @btn-default;
   border-radius: 5px;
   color: white;
-  border: 1px solid @btn-hover;
+  border: none;
   height: 32px;
   transition: all 400ms;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
   margin-left: 5px;
   margin-right: 5px;
+  font-size: 16px;
 }
-
 </style>
