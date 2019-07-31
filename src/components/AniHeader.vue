@@ -14,7 +14,7 @@
     <div class="ani-header-title">
       <span>{{ title }}</span>
     </div>
-    <div class="ani-header-ops">
+    <div class="ani-header-ops" v-if="!router">
       <a
         :href="item.href"
         v-for="item in link"
@@ -26,6 +26,18 @@
         </div>
       </a>
     </div>
+    <div class="ani-header-ops" v-else>
+      <router-link
+          v-for="item in link"
+          :to="item.href"
+          :key="item.name"
+          class="ani-header-link"
+      >
+        <div class="ani-header-button">
+          {{ item.name }}
+        </div>
+      </router-link>
+    </div>
   </div>
 </template>
 
@@ -36,7 +48,8 @@ export default {
   props: {
     title: String,
     link: Array,
-    menuOpenedProp:Boolean
+    menuOpenedProp:Boolean,
+    router:Boolean
   },
   methods: {
     handleClickMenu() {

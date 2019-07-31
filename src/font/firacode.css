@@ -38,3 +38,9 @@
   font-weight: 300;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('../assets/otf/NotoSansCJKsc-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
