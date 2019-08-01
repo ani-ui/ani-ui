@@ -14,29 +14,8 @@
     <div class="ani-header-title">
       <span>{{ title }}</span>
     </div>
-    <div class="ani-header-ops" v-if="!router">
-      <a
-        :href="item.href"
-        v-for="item in link"
-        :key="item.name"
-        class="ani-header-link"
-      >
-        <div class="ani-header-button">
-          {{ item.name }}
-        </div>
-      </a>
-    </div>
-    <div class="ani-header-ops" v-else>
-      <router-link
-          v-for="item in link"
-          :to="item.href"
-          :key="item.name"
-          class="ani-header-link"
-      >
-        <div class="ani-header-button">
-          {{ item.name }}
-        </div>
-      </router-link>
+    <div class="ani-header-ops">
+      <slot></slot>
     </div>
   </div>
 </template>
@@ -99,4 +78,9 @@ export default {
 #menu-3 {
   top: 26px;
 }
+.ani-header-ops {
+  float: right;
+  height: 64px;
+}
+
 </style>
