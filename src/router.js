@@ -10,6 +10,6 @@ export default new Router({
   routes: [
     {path:"/",component:MainView},
     {path:"/component",component:ComponentView},
-    {path:"/about",component:About}
+    {path:"/about",component:About},
   ]
 });
