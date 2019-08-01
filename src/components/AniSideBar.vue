@@ -16,7 +16,7 @@
 <style scoped>
   .ani-side-bar-style {
     width: 200px;
-    overflow: auto;
-    background-color: rgba(0,0,0,.12);
+    margin-right: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
   }
 </style>

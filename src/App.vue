@@ -5,7 +5,7 @@
     <ani-header :menu-opened-prop.sync="menuOpened" title="Ani UI">
       <ani-header-link router link="/">Home</ani-header-link>
       <ani-header-link router link="/component">Component</ani-header-link>
-      <ani-header-link link="https://github.com/laiiihz">
+      <ani-header-link link="https://github.com/laiiihz/ani-ui">
         <svg-github style="vertical-align: middle"></svg-github>
       </ani-header-link>
     </ani-header>
@@ -42,11 +42,6 @@ export default {
         { name: "关于", href: "about" }]
     };
   },
-  watch: {
-    menuOpened(value) {
-      window.console.log(value ? "menu is opened" : "menu not open");
-    }
-  }
 };
 </script>
 <style lang="less">
