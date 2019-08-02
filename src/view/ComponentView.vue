@@ -1,6 +1,6 @@
 <template>
   <ani-content>
-    <ani-side-bar :width="300">
+    <ani-side-bar :width="230">
       <ani-menu direction="vertical" divider router>
         <ani-menu-title title="入门指南"></ani-menu-title>
         <ani-menu-item link="install">安装</ani-menu-item>

@@ -12,8 +12,8 @@ export default new Router({
   routes: [
     { path: "/", component: MainView },
     { path: "/component", component: ComponentView ,children:[
+            {path:"",component:MenuInstall,name:'install'},
         {path:"button",component:MenuButton,name:'button'},
-        {path:"install",component:MenuInstall,name:'install'},
       ] },
     { path: "/about", component: About }
   ]

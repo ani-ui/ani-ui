@@ -2,17 +2,20 @@
     <div>
         <h1>安装</h1>
         <h2>通过 npm 或 yarn 安装 </h2>
-        <p>
-            <prism-editor :code="codeNpm" language="shell"></prism-editor>
-            <prism-editor :code="codeYarn" language="shell"></prism-editor>
-        </p>
-
+        <div style="width: 70%">
+           <ani-card>
+                   <prism-editor :code="codeNpm" language="shell"></prism-editor>
+                   <prism-editor :code="codeYarn" language="shell"></prism-editor>
+           </ani-card>
+        </div>
         <h2>通过 CDN 安装 </h2>
-        <p>
-            <prism-editor :code="codeCss" language="markup"></prism-editor>
-            <prism-editor :code="codeScript" language="markup"></prism-editor>
-        </p>
-
+        <div style="width: 70%">
+            <ani-card>
+                    <prism-editor :code="codeCss" language="markup"></prism-editor>
+                    <prism-editor :code="codeScript" language="markup"></prism-editor>
+            </ani-card>
+        </div>
+        <div style="height: 1000px"></div>
     </div>
 </template>
 
@@ -21,9 +24,11 @@
     import "prismjs";
     import "prismjs/themes/prism.css";
     import PrismEditor from "vue-prism-editor";
+    import AniCard from "../../components/AniCard";
     export default {
         name: "MenuInstall",
         components:{
+            AniCard,
             PrismEditor
         },
         data(){

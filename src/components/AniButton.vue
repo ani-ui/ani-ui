@@ -51,5 +51,8 @@ export default {
   margin-left: 5px;
   margin-right: 5px;
   font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
 }
 </style>

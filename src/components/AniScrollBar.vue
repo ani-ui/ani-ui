@@ -1,6 +1,6 @@
 <template>
   <div class="ani-scroll-bar-style">
-    <div style="height: 500px;"></div>
+    <slot></slot>
   </div>
 </template>
 
