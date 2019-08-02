@@ -11,10 +11,14 @@ Vue.use(Router);
 export default new Router({
   routes: [
     { path: "/", component: MainView },
-    { path: "/component", component: ComponentView ,children:[
-            {path:"",component:MenuInstall,name:'install'},
-        {path:"button",component:MenuButton,name:'button'},
-      ] },
+    {
+      path: "/component",
+      component: ComponentView,
+      children: [
+        { path: "", component: MenuInstall, name: "install" },
+        { path: "button", component: MenuButton, name: "button" }
+      ]
+    },
     { path: "/about", component: About }
   ]
 });
