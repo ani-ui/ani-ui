@@ -2,10 +2,16 @@
     <ani-card :title="title">
         <slot></slot>
         <ani-code-block>
-            <prism-editor
-                    :code="code"
-                    language="markup"
-            ></prism-editor>
+            <div>
+                <prism-editor
+                        :code="code"
+                        language="markup"
+                ></prism-editor>
+                <prism-editor
+                        :code="js"
+                        language="javascript"
+                ></prism-editor>
+            </div>
         </ani-code-block>
     </ani-card>
 </template>
@@ -21,7 +27,8 @@
         components:{AniCodeBlock, AniCard, PrismEditor },
         props:{
             title:String,
-            code:String
+            code:String,
+            js:String
         }
     }
 </script>

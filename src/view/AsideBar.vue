@@ -5,6 +5,8 @@
     <ani-menu-title title="组件"></ani-menu-title>
     <ani-menu-item link="button">按钮</ani-menu-item>
     <ani-menu-item link="follower">鼠标跟随</ani-menu-item>
+    <ani-menu-item link="drawer">抽屉</ani-menu-item>
+    <ani-menu-item link="message">消息通知</ani-menu-item>
   </ani-menu>
 </template>
 <script>
