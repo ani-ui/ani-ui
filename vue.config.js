@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === "production" ? "/ani-ui" : "/",
+  publicPath: process.env.NODE_ENV === "production" ? "/" : "/",
   productionSourceMap: false,
   chainWebpack: config => {
     config.module
