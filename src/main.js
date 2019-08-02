@@ -8,6 +8,8 @@ import "./font/firacode.css";
 Vue.config.productionTip = false;
 import "vue-prism-editor/dist/VuePrismEditor.css";
 import { TweenLite } from "gsap";
+import Message from "./components/Message/index";
+Vue.prototype.$message = Message;
 Vue.prototype.$Tween = TweenLite;
 new Vue({
   router,

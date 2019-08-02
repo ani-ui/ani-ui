@@ -1,7 +1,7 @@
 <template>
     <div>
         <div
-                style="overflow-x: auto;overflow-y: auto"
+                class="ani-code-block-main-style"
                 :style="`height: ${contentHeight}px`">
             <slot></slot>
         </div>
@@ -60,5 +60,20 @@
         transform: translateX(0px);
         opacity: 1;
     }
+    .ani-code-block-main-style {
+        overflow-x: auto;overflow-y: auto
+    }
+    .ani-code-block-main-style::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+    .ani-code-block-main-style::-webkit-scrollbar-track {
+    }
+    .ani-code-block-main-style::-webkit-scrollbar-thumb {
+        background-color: rgba(0,0,0,.2);
+        border-radius: 10px;
+        outline: none;
+    }
+
 
 </style>

@@ -33,6 +33,10 @@ export default {
   margin: 5px;
   border-radius: 5px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  transition: all 500ms ;
+}
+.ani-card-style:hover{
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
 }
 
 .ani-card-header {

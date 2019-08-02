@@ -1,10 +1,12 @@
 <template>
   <div id="app">
+    <ani-follower :normal="$store.state.mouseFollow" v-if="$store.state.mouseFollow"></ani-follower>
     <ani-back-top></ani-back-top>
     <ani-drawer :drawer-open.sync="menuOpened"></ani-drawer>
     <ani-header :menu-opened-prop.sync="menuOpened" title="Ani UI">
       <ani-header-link router link="/">主页</ani-header-link>
       <ani-header-link router link="/component">组件</ani-header-link>
+      <ani-header-link router link="/about">关于</ani-header-link>
       <ani-header-link link="https://github.com/laiiihz/ani-ui">
         <svg-github style="vertical-align: middle"></svg-github>
       </ani-header-link>
@@ -12,8 +14,6 @@
     <transition name="fade" mode="out-in">
       <router-view></router-view>
     </transition>
-    <div style="height: 2000px;">
-    </div>
   </div>
 </template>
 
@@ -23,6 +23,7 @@ import AniDrawer from "./components/AniDrawer";
 import AniBackTop from "./components/AniBackTop";
 import AniHeaderLink from "./components/AniHeaderLink";
 import SvgGithub from "./view/svg/SvgGithub";
+import AniFollower from "./components/AniFollower";
 export default {
   components: {
     SvgGithub,
@@ -30,16 +31,13 @@ export default {
     AniBackTop,
     AniDrawer,
     AniHeader,
+    AniFollower
   },
 
   data() {
     return {
       testStatus: false,
       menuOpened: false,
-      link: [
-        { name: "主页", href: "/" },
-        { name: "组件", href: "component" },
-        { name: "关于", href: "about" }]
     };
   },
 };

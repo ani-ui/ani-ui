@@ -21,7 +21,7 @@
   </a>
   <div v-else>
     <div
-            @click="handleClick"
+      @click="handleClick"
       class="ani-menu-item-base-style"
       :class="[
         direct.direction
@@ -29,13 +29,16 @@
           : 'ani-menu-item-style__vertical',
         direct.divider ? 'ani-menu-divider' : ''
       ]"
+
       :style="
         `height:${direct.height ? direct.height : 40}px;line-height:${
           direct.height ? direct.height : 40
         }px`
       "
     >
-      <slot></slot>
+      <div style="margin-left: 32px">
+        <slot></slot>
+      </div>
     </div>
   </div>
 </template>
@@ -47,11 +50,11 @@ export default {
   props: {
     link: String
   },
-    methods: {
-        handleClick() {
-            this.$router.push({name:this.link})
-        }
+  methods: {
+    handleClick() {
+      this.$router.push({ name: this.link });
     }
+  }
 };
 </script>
 

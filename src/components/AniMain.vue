@@ -12,7 +12,7 @@
 
 <style scoped>
   .ani-main-style {
-    flex: 1;
     min-height: 100px;
+    flex: 1;
   }
 </style>
