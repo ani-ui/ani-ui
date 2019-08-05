@@ -1,12 +1,15 @@
 <template>
-    <div style="width: 100%;">
+    <div :class="`ani-col-${col}`">
         <slot></slot>
     </div>
 </template>
 
 <script>
     export default {
-        name: "AniRow"
+        name: "AniCol",
+        props:{
+            col:Number,
+        }
     }
 </script>
 

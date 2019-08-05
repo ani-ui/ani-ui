@@ -86,8 +86,6 @@
   line-height: 64px;
 }
 
-
-
 .ani-header-drawer-button {
   float: left;
   display: inline-block;
@@ -119,7 +117,7 @@
   box-shadow: 5px 0 20px rgba(0, 0, 0, 0.2);
   transition: all 500ms;
 }
-.ani-drawer-style:hover{
+.ani-drawer-style:hover {
   box-shadow: 10px 0 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -175,7 +173,22 @@
   width: 300px !important;
 }
 //a link override
-a:link,a:hover,a:active,a:visited {
+a:link,
+a:hover,
+a:active,
+a:visited {
   text-decoration: none;
   color: #222222;
+}
+
+
+// MAKE COL
+// 12 part
+.gen-ani-col(12);
+.gen-ani-col(@n, @i: 1) when (@i =< @n) {
+  .ani-col-@{i} {
+    width: (100% / @n * @i);
+    display: inline-block;
+  }
+  .gen-ani-col(@n, (@i + 1));
 }

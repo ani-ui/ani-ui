@@ -26,8 +26,10 @@
     import "prismjs/themes/prism.css";
     import PrismEditor from "vue-prism-editor";
     import AniCard from "../../components/AniCard";
+    import mountMixin from "../component/mixin";
     export default {
         name: "MenuInstall",
+        mixins:[mountMixin],
         components:{
             AniCard,
             PrismEditor

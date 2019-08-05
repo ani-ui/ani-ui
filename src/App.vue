@@ -16,7 +16,6 @@
     </transition>
   </div>
 </template>
-
 <script>
 import AniHeader from "./components/AniHeader";
 import AniDrawer from "./components/AniDrawer";

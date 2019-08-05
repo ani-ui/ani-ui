@@ -4,6 +4,8 @@
       class="ani-back-top-style"
       v-show="showBackTopButton"
       @click="handleClickTop"
+      :style="`right:${right}px`"
+      id="ani-back-top"
     >
       UP
     </div>
@@ -15,41 +17,52 @@ import { TweenLite, Power3 } from "gsap";
 export default {
   name: "AniBackTop",
   mounted() {
-    if(!this.target){
-      window.onscroll = ()=>{
+    setInterval(() => {
+      this.hasFloatButton = document.getElementById("ani-float-button") !== null;
+    }, 1000);
+    if (!this.target) {
+      window.onscroll = () => {
         this.showBackTopButton = window.scrollY >= 300;
-      }
-    }else{
-      document.getElementById(this.target).onscroll=()=>{
-        this.showBackTopButton = document.getElementById(this.target).scrollTop >= 300;
-        window.console.log(document.getElementById(this.target).scrollTop)
-      }
+      };
+    } else {
+      document.getElementById(this.target).onscroll = () => {
+        this.showBackTopButton =
+          document.getElementById(this.target).scrollTop >= 300;
+      };
     }
   },
   data() {
     return {
       showBackTopButton: false,
       scrollPosition: 0,
-      scrollControl: 0
+      scrollControl: 0,
+      right: 20,
+      hasFloatButton: false
     };
   },
-  props:{
-    target:String
+  props: {
+    target: String
   },
   watch: {
     scrollControl(value) {
-      if(!this.target){
+      if (!this.target) {
         window.scrollTo(0, value);
-      }else document.getElementById(this.target).scrollTo(0,value)
-
+      } else document.getElementById(this.target).scrollTo(0, value);
+    },
+    hasFloatButton(value) {
+      window.console.log(value);
+      if (value) {
+        TweenLite.to("#ani-back-top",0.5, { x: -68,ease: Power3.easeInOut  });
+      } else TweenLite.to("#ani-back-top", 0.5, { x: 0,ease: Power3.easeInOut  });
     }
   },
   methods: {
     handleClickTop() {
-     if(!this.target){
-       this.scrollControl = window.scrollY;
-     } else this.scrollControl=document.getElementById(this.target).scrollTop;
-      TweenLite.to(this.$data, 1, { scrollControl: 0,ease:Power3.easeInOut });
+      if (!this.target) {
+        this.scrollControl = window.scrollY;
+      } else
+        this.scrollControl = document.getElementById(this.target).scrollTop;
+      TweenLite.to(this.$data, 1, { scrollControl: 0, ease: Power3.easeInOut });
     }
   }
 };
@@ -58,8 +71,7 @@ export default {
 <style scoped>
 .ani-back-top-style {
   position: fixed;
-  bottom: 16px;
-  right: 16px;
+  bottom: 20px;
   height: 48px;
   width: 48px;
   background-color: white;

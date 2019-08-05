@@ -12,6 +12,7 @@ import MenuMessage from "./view/menus/MenuMessage";
 import MenuBacktop from "./view/menus/MenuBacktop";
 import MenuStructure from "./view/menus/MenuStructure";
 import MenuLayout from "./view/menus/MenuLayout";
+import MenuFloatButton from "./view/menus/MenuFloatButton";
 
 Vue.use(Router);
 
@@ -30,6 +31,7 @@ export default new Router({
         { path: "backtop", component: MenuBacktop, name: "backtop" },
         { path: "layout", component: MenuLayout, name: "layout" },
         { path: "structure", component: MenuStructure, name: "structure" },
+        { path: "float", component: MenuFloatButton, name: "float" },
         { path: "test", component: TestJsx, name: "TestJsx" },
       ]
     },

@@ -6,6 +6,7 @@
 </template>
 
 <script>
+    import mountMixin from "../component/mixin";
     import AniButton from "../../components/AniButton";
     export default {
         name: "MenuMessage",
@@ -14,7 +15,8 @@
             handleMakeMsg() {
                 this.$message()
             }
-        }
+        },
+        mixins:[mountMixin],
     }
 </script>
 

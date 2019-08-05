@@ -32,6 +32,7 @@
 import CardCodeDisplay from "../component/CardCodeDisplay";
 import AniDrawer from "../../components/AniDrawer";
 import AniButton from "../../components/AniButton";
+import mountMixin from "../component/mixin";
 export default {
   name: "MenuDrawer",
   components: { CardCodeDisplay, AniDrawer, AniButton },
@@ -68,7 +69,8 @@ export default {
       this.directionDrawer = direction;
       this.menuOpened1 = !this.menuOpened1;
     }
-  }
+  },
+  mixins:[mountMixin],
 };
 </script>
 

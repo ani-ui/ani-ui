@@ -66,6 +66,7 @@ import CardCodeDisplay from "../component/CardCodeDisplay";
 import AniIconText from "../../components/AniIconText";
 import ApiDocs from "../component/ApiDocs";
 import ApiChild from "../component/ApiChild";
+import mountMixin from "../component/mixin";
 export default {
   name: "MenuButton",
   components: { ApiChild, ApiDocs, CardCodeDisplay, AniButton, AniIconText },
@@ -103,7 +104,8 @@ export default {
       window.console.log("press");
       this.$message();
     }
-  }
+  },
+  mixins:[mountMixin],
 };
 </script>
 

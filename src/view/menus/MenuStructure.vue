@@ -5,8 +5,10 @@
 </template>
 
 <script>
+    import mountMixin from "../component/mixin";
     export default {
-        name: "MenuStructure"
+        name: "MenuStructure",
+        mixins:[mountMixin],
     }
 </script>
 

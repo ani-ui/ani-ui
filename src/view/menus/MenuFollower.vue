@@ -1,17 +1,18 @@
 <template>
   <div style="width: 70%">
     <h1>ani-follower 鼠标跟随</h1>
-      <div>
-          <card-code-display title="基础使用" :code="followCode">
-              <ani-button @click="handleClickMouse">开启/关闭鼠标跟随</ani-button>
-          </card-code-display>
-      </div>
+    <div>
+      <card-code-display title="基础使用" :code="followCode">
+        <ani-button @click="handleClickMouse">开启/关闭鼠标跟随</ani-button>
+      </card-code-display>
+    </div>
   </div>
 </template>
 
 <script>
 import AniButton from "../../components/AniButton";
 import CardCodeDisplay from "../component/CardCodeDisplay";
+import mountMixin from "../component/mixin";
 export default {
   name: "MenuFollower",
   components: { CardCodeDisplay, AniButton },
@@ -20,6 +21,7 @@ export default {
       this.$store.commit("changeMouseFollow", !this.$store.state.mouseFollow);
     }
   },
+  mixins: [mountMixin],
   data() {
     return {
       followCode: `
@@ -29,7 +31,7 @@ export default {
 `
     };
   }
-};
+}
 </script>
 
 <style scoped></style>

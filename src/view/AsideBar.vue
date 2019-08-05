@@ -11,6 +11,7 @@
     <ani-menu-item link="drawer">抽屉</ani-menu-item>
     <ani-menu-item link="message">消息通知</ani-menu-item>
     <ani-menu-item link="backtop">回到顶部</ani-menu-item>
+    <ani-menu-item link="float">浮动按钮</ani-menu-item>
   </ani-menu>
 </template>
 <script>
@@ -20,6 +21,6 @@ import AniMenuTitle from "../components/AniMenu/AniMenuTitle";
 
 export default {
   name: "aside-bar",
-  components: { AniMenu, AniMenuItem, AniMenuTitle }
+  components: { AniMenu, AniMenuItem, AniMenuTitle },
 };
 </script>

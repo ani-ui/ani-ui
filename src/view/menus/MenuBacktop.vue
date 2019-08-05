@@ -5,8 +5,11 @@
 </template>
 
 <script>
+    import mountMixin from "../component/mixin";
+
     export default {
-        name: "MenuBacktop"
+        name: "MenuBacktop",
+        mixins:[mountMixin],
     }
 </script>
 
