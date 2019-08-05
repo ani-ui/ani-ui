@@ -4,6 +4,7 @@
             <span>{{ subtitle }}</span>
         </div>
         <slot></slot>
+        <div style="height: 10px"></div>
         <ani-code-block>
             <div>
                 <prism-editor

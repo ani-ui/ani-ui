@@ -32,11 +32,14 @@ export default {
   width: 100%;
   margin: 5px;
   border-radius: 5px;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.12);
   transition: all 500ms ;
 }
 .ani-card-style:hover{
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+}
+.ani-card-style:active{
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 .ani-card-header {

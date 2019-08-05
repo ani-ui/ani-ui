@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ani-follower :normal="$store.state.mouseFollow" v-if="$store.state.mouseFollow"></ani-follower>
+    <ani-follower :normal="$store.state.mouseFollow" icon="face" v-if="$store.state.mouseFollow"></ani-follower>
     <ani-back-top target="main-over"></ani-back-top>
     <ani-drawer :drawer-open.sync="menuOpened"></ani-drawer>
     <ani-header :menu-opened-prop.sync="menuOpened" title="Ani UI">

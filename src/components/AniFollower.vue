@@ -1,8 +1,8 @@
 <template>
   <div class="ani-follower-style" :style="`top:${clientY}px;left:${clientX}px`">
-    <i style="position: absolute;top: 5px;left: 5px" class="material-icons">
-      tag_faces
-    </i>
+    <div style="position: absolute;top: 5px;left: 5px" >
+     <i class="material-icons">{{ icon }}</i>
+    </div>
   </div>
 </template>
 
@@ -27,7 +27,7 @@ export default {
     document.body.style.cursor = "auto";
   },
   props: {
-    normal: Boolean
+    icon:String,
   }
 };
 </script>
