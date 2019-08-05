@@ -19,7 +19,7 @@
         ></ani-drawer>
       </div>
     </card-code-display>
-      <card-code-display title="模糊" :code="codeDrawer" :js="codeDrawerJs">
+      <card-code-display title="模糊" subtitle="仅支持部分浏览器，或在chrome中开启实验特性(chrome://flags/#enable-experimental-web-platform-features)" :code="codeDrawer" :js="codeDrawerJs">
           <div>
               <ani-button @click="handleOpenClose2">开启/关闭 抽屉</ani-button>
               <ani-drawer :drawer-open.sync="menuOpened2" blur></ani-drawer>

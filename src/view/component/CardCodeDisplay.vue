@@ -1,5 +1,8 @@
 <template>
     <ani-card :title="title">
+        <div v-if="subtitle" style="line-height:30px;width: 100%;color: rgba(0,0,0,0.7)">
+            <span>{{ subtitle }}</span>
+        </div>
         <slot></slot>
         <ani-code-block>
             <div>
@@ -27,6 +30,7 @@
         components:{AniCodeBlock, AniCard, PrismEditor },
         props:{
             title:String,
+            subtitle:String,
             code:String,
             js:String
         }

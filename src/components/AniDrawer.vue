@@ -19,12 +19,7 @@
       <div
         v-show="drawerOpen"
         class="ani-drawer-cap"
-        :class="[
-        {
-        'is-blur':blur
-        }
-        ]"
-        :style="`height:${innerHeight}px;width:${innerWidth}px;`"
+        :style="`height:${innerHeight}px;width:${innerWidth}px;${blur?blured:''}`"
         @click="handleClickClose"
       ></div>
     </transition>
@@ -50,10 +45,16 @@ export default {
       drawerNotClosed: true
     };
   },
+  computed:{
+    blured(){
+      return `backdrop-filter: blur(${this.radius?this.radius:'5'}px);`
+    }
+  },
   props: {
     drawerOpen: Boolean,
     blur: Boolean,
-    direction:String  // default left
+    direction:String,  // default left
+    radius:Number
   },
   methods: {
     handleClickClose() {
@@ -118,9 +119,5 @@ export default {
   z-index: 4;
   left: 0;
   top: 0;
-}
-.is-blur {
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
 }
 </style>

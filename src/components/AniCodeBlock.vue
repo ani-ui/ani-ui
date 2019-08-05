@@ -7,12 +7,12 @@
       <slot></slot>
     </div>
     <div class="ani-code-block--bottom" @click="handleClickShowCode">
-      <i class="material-icons ani-show-code-arrow-down" v-if="!isShow"
-        >keyboard_arrow_down</i
-      >
-      <i class="material-icons ani-show-code-arrow-down" v-else
-        >keyboard_arrow_up</i
-      >
+      <i class="material-icons ani-show-code-arrow-down" v-if="!isShow">
+        keyboard_arrow_down
+      </i>
+      <i class="material-icons ani-show-code-arrow-down" v-else>
+        keyboard_arrow_up
+      </i>
       <span v-if="!isShow" class="ani-show-code-text">显示代码</span>
       <span v-else class="ani-show-code-text">隐藏代码</span>
     </div>
