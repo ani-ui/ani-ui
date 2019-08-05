@@ -9,6 +9,9 @@ import TestJsx from "./view/menus/TestJsx";
 import MenuFollower from "./view/menus/MenuFollower";
 import MenuDrawer from "./view/menus/MenuDrawer";
 import MenuMessage from "./view/menus/MenuMessage";
+import MenuBacktop from "./view/menus/MenuBacktop";
+import MenuStructure from "./view/menus/MenuStructure";
+import MenuLayout from "./view/menus/MenuLayout";
 
 Vue.use(Router);
 
@@ -24,6 +27,9 @@ export default new Router({
         { path: "follower", component: MenuFollower, name: "follower" },
         { path: "drawer", component: MenuDrawer, name: "drawer" },
         { path: "message", component: MenuMessage, name: "message" },
+        { path: "backtop", component: MenuBacktop, name: "backtop" },
+        { path: "layout", component: MenuLayout, name: "layout" },
+        { path: "structure", component: MenuStructure, name: "structure" },
         { path: "test", component: TestJsx, name: "TestJsx" },
       ]
     },

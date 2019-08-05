@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <ani-follower :normal="$store.state.mouseFollow" v-if="$store.state.mouseFollow"></ani-follower>
-    <ani-back-top></ani-back-top>
+    <ani-back-top target="main-over"></ani-back-top>
     <ani-drawer :drawer-open.sync="menuOpened"></ani-drawer>
     <ani-header :menu-opened-prop.sync="menuOpened" title="Ani UI">
       <ani-header-link router link="/">主页</ani-header-link>

@@ -1,4 +1,5 @@
 # ani-ui
+[![Coverage Status](https://coveralls.io/repos/github/laiiihz/ani-ui/badge.svg?branch=master)](https://coveralls.io/github/laiiihz/ani-ui?branch=master)
 
 ## Project setup
 ```

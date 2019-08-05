@@ -1,7 +1,7 @@
 <template>
   <div >
 
-    <div style="height: 300px;width: 300px;position: fixed;right: 200px;top: 100px">
+    <div style="height: 300px;width: 300px;position: fixed;right: 10%;top: 100px">
       <ani-card>
         <h1>一套基于</h1>
         <br/>
@@ -45,7 +45,6 @@ export default {
       color: yellowgreen;
     }
     50%{
-      transform: scale(1.2);
       color: forestgreen;
     }
     60%{
@@ -61,7 +60,6 @@ export default {
       color: purple;
     }
     to{
-      transform: scale(1);
       color: red;
     }
   }

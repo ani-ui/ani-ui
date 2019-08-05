@@ -15,10 +15,16 @@ import { TweenLite, Power3 } from "gsap";
 export default {
   name: "AniBackTop",
   mounted() {
-    let vthis = this;
-    window.onscroll = function() {
-      vthis.showBackTopButton = window.scrollY >= 300;
-    };
+    if(!this.target){
+      window.onscroll = ()=>{
+        this.showBackTopButton = window.scrollY >= 300;
+      }
+    }else{
+      document.getElementById(this.target).onscroll=()=>{
+        this.showBackTopButton = document.getElementById(this.target).scrollTop >= 300;
+        window.console.log(document.getElementById(this.target).scrollTop)
+      }
+    }
   },
   data() {
     return {
@@ -27,14 +33,22 @@ export default {
       scrollControl: 0
     };
   },
+  props:{
+    target:String
+  },
   watch: {
     scrollControl(value) {
-      window.scrollTo(0, value);
+      if(!this.target){
+        window.scrollTo(0, value);
+      }else document.getElementById(this.target).scrollTo(0,value)
+
     }
   },
   methods: {
     handleClickTop() {
-      this.scrollControl = window.scrollY;
+     if(!this.target){
+       this.scrollControl = window.scrollY;
+     } else this.scrollControl=document.getElementById(this.target).scrollTop;
       TweenLite.to(this.$data, 1, { scrollControl: 0,ease:Power3.easeInOut });
     }
   }
@@ -63,6 +77,7 @@ export default {
 .ani-back-top-style:active {
   box-shadow: 1px 1px 40px rgba(0, 0, 0, 0.4);
   background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
 }
 .fade-small-enter-active,
 .fade-small-leave-active {

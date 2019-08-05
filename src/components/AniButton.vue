@@ -43,7 +43,7 @@ export default {
   outline: none;
   background-color: @btn-default;
   border-radius: 5px;
-  color: white;
+  color: black;
   border: none;
   height: 32px;
   transition: all 400ms;
