@@ -34,7 +34,7 @@ export default new Router({
         { path: "structure", component: MenuStructure, name: "structure" },
         { path: "float", component: MenuFloatButton, name: "float" },
         { path: "box", component: MenuBox, name: "box" },
-        { path: "progress", component: MenuProgress, name: "progress" },
+        { path: "progress", component: MenuProgress, name: "progress" }
       ]
     },
     { path: "/about", component: About }

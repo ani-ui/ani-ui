@@ -23,6 +23,6 @@ import AniMenuTitle from "../components/AniMenu/AniMenuTitle";
 
 export default {
   name: "aside-bar",
-  components: { AniMenu, AniMenuItem, AniMenuTitle },
+  components: { AniMenu, AniMenuItem, AniMenuTitle }
 };
 </script>

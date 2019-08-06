@@ -18,7 +18,7 @@ import AniButton from "../components/AniButton";
 import AniScrollBar from "../components/AniScrollBar";
 export default {
   name: "About",
-  components: {AniScrollBar, AniCard, AniButton }
+  components: { AniScrollBar, AniCard, AniButton }
 };
 </script>
 

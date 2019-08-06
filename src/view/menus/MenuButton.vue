@@ -74,10 +74,30 @@ export default {
   data: function() {
     return {
       apiChildren: [
-        {name: "circle", type: "Boolean", value: "true/false", describe: "按钮圆角"},
-        {name: "transparent", type: "Boolean", value: "true/false", describe: "按钮透明"},
-        {name: "disable", type: "Boolean", value: "true/false", describe: "按钮禁用"},
-        {name: "size", type: "String", value: "xs/sm/md/lg/xl", describe: "按钮大小"},
+        {
+          name: "circle",
+          type: "Boolean",
+          value: "true/false",
+          describe: "按钮圆角"
+        },
+        {
+          name: "transparent",
+          type: "Boolean",
+          value: "true/false",
+          describe: "按钮透明"
+        },
+        {
+          name: "disable",
+          type: "Boolean",
+          value: "true/false",
+          describe: "按钮禁用"
+        },
+        {
+          name: "size",
+          type: "String",
+          value: "xs/sm/md/lg/xl",
+          describe: "按钮大小"
+        }
       ],
       codeButton: `
 <ani-button >
@@ -105,7 +125,7 @@ export default {
       this.$message();
     }
   },
-  mixins:[mountMixin],
+  mixins: [mountMixin]
 };
 </script>
 

@@ -1,25 +1,23 @@
 <template>
-    <div style="width: 90%">
-        <h1>ani-box 盒子</h1>
-        <card-code-display title="基础使用">
-            <ani-box >
-                <div style="height: 100px;width: 100px">
-                    MenuBox
-                </div>
-            </ani-box>
-        </card-code-display>
-    </div>
+  <div style="width: 90%">
+    <h1>ani-box 盒子</h1>
+    <card-code-display title="基础使用">
+      <ani-box>
+        <div style="height: 100px;width: 100px">
+          MenuBox
+        </div>
+      </ani-box>
+    </card-code-display>
+  </div>
 </template>
 
 <script>
-    import CardCodeDisplay from "../component/CardCodeDisplay";
-    import AniBox from "../../components/AniBox";
-    export default {
-        name: "MenuBox",
-        components: {CardCodeDisplay,AniBox}
-    }
+import CardCodeDisplay from "../component/CardCodeDisplay";
+import AniBox from "../../components/AniBox";
+export default {
+  name: "MenuBox",
+  components: { CardCodeDisplay, AniBox }
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

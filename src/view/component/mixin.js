@@ -3,4 +3,4 @@ let mountMixin = {
     document.getElementById("main-over").scrollTop = 0;
   }
 };
-export default mountMixin
+export default mountMixin;
