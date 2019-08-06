@@ -4,15 +4,15 @@
         <h2>通过 npm 或 yarn 安装 </h2>
         <div >
            <ani-card>
-                   <prism-editor :code="codeNpm" language="shell"></prism-editor>
-                   <prism-editor :code="codeYarn" language="shell"></prism-editor>
+                   <prism-editor readonly :code="codeNpm" language="shell"></prism-editor>
+                   <prism-editor readonly :code="codeYarn" language="shell"></prism-editor>
            </ani-card>
         </div>
         <h2>通过 CDN 安装 </h2>
         <div>
             <ani-card>
-                    <prism-editor :code="codeCss" language="markup"></prism-editor>
-                    <prism-editor :code="codeScript" language="markup"></prism-editor>
+                    <prism-editor readonly :code="codeCss" language="markup"></prism-editor>
+                    <prism-editor readonly :code="codeScript" language="markup"></prism-editor>
             </ani-card>
         </div>
 

@@ -8,6 +8,7 @@
         <ani-code-block>
             <div>
                 <prism-editor
+                        readonly
                         :code="code"
                         language="markup"
                 ></prism-editor>

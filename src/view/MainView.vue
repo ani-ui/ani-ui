@@ -2,12 +2,14 @@
   <div >
 
     <div style="height: 300px;width: 300px;position: fixed;right: 10%;top: 100px">
-      <ani-card>
-        <h1>一套基于</h1>
-        <br/>
-        <div class="home-vue-title-style">Vue 2</div>
-        <h1>的动效组件库</h1>
-      </ani-card>
+      <keep-alive>
+        <ani-card>
+          <h1>一套基于</h1>
+          <br/>
+          <div class="home-vue-title-style">Vue 2</div>
+          <h1>的动效组件库</h1>
+        </ani-card>
+      </keep-alive>
     </div>
   </div>
 </template>
