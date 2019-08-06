@@ -12,6 +12,7 @@
     <ani-menu-item link="message">消息通知</ani-menu-item>
     <ani-menu-item link="backtop">回到顶部</ani-menu-item>
     <ani-menu-item link="float">浮动按钮</ani-menu-item>
+    <ani-menu-item link="box">盒子</ani-menu-item>
   </ani-menu>
 </template>
 <script>

@@ -5,7 +5,6 @@ import ComponentView from "./view/ComponentView";
 import About from "./view/About";
 import MenuButton from "./view/menus/MenuButton";
 import MenuInstall from "./view/menus/MenuInstall";
-import TestJsx from "./view/menus/TestJsx";
 import MenuFollower from "./view/menus/MenuFollower";
 import MenuDrawer from "./view/menus/MenuDrawer";
 import MenuMessage from "./view/menus/MenuMessage";
@@ -13,6 +12,7 @@ import MenuBacktop from "./view/menus/MenuBacktop";
 import MenuStructure from "./view/menus/MenuStructure";
 import MenuLayout from "./view/menus/MenuLayout";
 import MenuFloatButton from "./view/menus/MenuFloatButton";
+import MenuBox from "./view/menus/MenuBox";
 
 Vue.use(Router);
 
@@ -32,7 +32,7 @@ export default new Router({
         { path: "layout", component: MenuLayout, name: "layout" },
         { path: "structure", component: MenuStructure, name: "structure" },
         { path: "float", component: MenuFloatButton, name: "float" },
-        { path: "test", component: TestJsx, name: "TestJsx" },
+        { path: "box", component: MenuBox, name: "box" },
       ]
     },
     { path: "/about", component: About }

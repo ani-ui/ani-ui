@@ -13,6 +13,7 @@ import AniScrollBar from "../components/AniScrollBar";
 import AniContent from "../components/AniContent";
 import Message from "../components/Message/index";
 import AniHeaderLink from "../components/AniHeaderLink";
+import AniBox from "../components/AniBox";
 import AniRow from "../components/Row/index";
 import AniCol from "../components/Col/index";
 import AniFloatButton from "../components/AniFloatButton/index";
@@ -34,7 +35,8 @@ const Components = {
   AniSideBar,
   AniRow,
   AniCol,
-  AniFloatButton
+  AniFloatButton,
+  AniBox
 };
 Vue.prototype.$message = Message;
 Object.keys(Components).forEach(name => {
