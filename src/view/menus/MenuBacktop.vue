@@ -1,9 +1,9 @@
 <template>
     <div style="width: 90%">
         <h1>ani-back-top 回到顶部</h1>
-        <card-code-display title="基础使用">
-
+        <card-code-display title="基础使用" subtitle="滑轮下滑查看效果">
         </card-code-display>
+        <div style="height: 1500px"></div>
     </div>
 </template>
 
