@@ -31,16 +31,20 @@ export default {
   @keyframes fade-simple {
     from{
       opacity: 0;
-      transform: translateX(400px);
+      transform: translateX(400px) scale(0.8);
+    }
+    25%,74%{
+      opacity: 1;
+      transform: translateX(0)  scale(0.8);
     }
     33%,66%{
       opacity: 1;
-      transform: translateX(0);
+      transform: translateX(0)  scale(1);
     }
 
     to{
       opacity: 0;
-      transform: translateX(400px);
+      transform: translateX(400px) scale(0.8);
     }
   }
 </style>

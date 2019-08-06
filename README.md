@@ -1,30 +1,17 @@
 # ani-ui
-[![Coverage Status](https://coveralls.io/repos/github/laiiihz/ani-ui/badge.svg?branch=master)](https://coveralls.io/github/laiiihz/ani-ui?branch=master)
+Animate component for vue.js 2.0
 
-## Project setup
+## Getting Started
+### using `npm` or `yarn`
+```shell script
+npm install ani-ui@latest
 ```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
-
-### Compiles and minifies for production
-```
-yarn run build
+```shell script
+yarn add ani-ui@latest
 ```
 
-### Run your tests
+### using CDN
+```html
+<link rel="stylesheet" href="https://unpkg.com/ani-ui/dist/ani-ui.css">
+<script src="https://unpkg.com/ani-ui/dist/ani-ui.common.js"/>
 ```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
