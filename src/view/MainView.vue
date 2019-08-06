@@ -1,24 +1,31 @@
 <template>
   <div >
 
-    <div style="height: 300px;width: 300px;position: fixed;right: 10%;top: 100px">
-      <keep-alive>
-        <ani-card>
-          <h1>一套基于</h1>
-          <br/>
-          <div class="home-vue-title-style">Vue 2</div>
-          <h1>的动效组件库</h1>
-        </ani-card>
-      </keep-alive>
+    <div>
+
+            <ani-row>
+              <ani-col :col="12">
+                <ani-card style="min-width: 120px">
+                  <div style="font-size:30px ">
+                    <div style="display: inline-block">一套基于</div><div class="home-vue-title-style"  style="display: inline-block">Vue 2</div><div  style="display: inline-block">的动效组件库</div>
+                  </div>
+                </ani-card>
+              </ani-col>
+              <ani-col :col="12">
+                <img src="../assets/logo-main.png" style="width: 80%;margin-left: 10%" alt="">
+              </ani-col>
+            </ani-row>
     </div>
   </div>
 </template>
 
 <script>
 import AniCard from "../components/AniCard";
+import AniCol from "../components/Col/src/AniCol";
+import AniRow from "../components/Row/src/AniRow";
 export default {
   name: "MainView",
-  components: {AniCard},
+  components: {AniCard,AniCol,AniRow},
 };
 </script>
 
