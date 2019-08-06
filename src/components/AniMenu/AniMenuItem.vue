@@ -29,7 +29,6 @@
           : 'ani-menu-item-style__vertical',
         direct.divider ? 'ani-menu-divider' : ''
       ]"
-
       :style="
         `height:${direct.height ? direct.height : 40}px;line-height:${
           direct.height ? direct.height : 40

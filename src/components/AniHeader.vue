@@ -27,17 +27,16 @@ export default {
   props: {
     title: String,
     link: Array,
-    menuOpenedProp:Boolean,
-    router:Boolean
+    menuOpenedProp: Boolean,
+    router: Boolean
   },
   methods: {
     handleClickMenu() {
-
-      this.$emit("update:menuOpenedProp",!this.menuOpenedProp)
+      this.$emit("update:menuOpenedProp", !this.menuOpenedProp);
     }
   },
-  watch:{
-    menuOpenedProp(value){
+  watch: {
+    menuOpenedProp(value) {
       if (value) {
         TweenLite.to("#menu-1", 0.5, {
           rotation: 45,
@@ -82,5 +81,4 @@ export default {
   float: right;
   height: 64px;
 }
-
 </style>

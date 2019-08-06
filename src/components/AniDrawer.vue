@@ -1,11 +1,15 @@
 <template>
   <div>
-    <transition :name="direction?'slide-fade-'+direction:'slide-fade-left'">
+    <transition
+      :name="direction ? 'slide-fade-' + direction : 'slide-fade-left'"
+    >
       <div
         :style="`height:${innerHeight}px`"
         class="ani-drawer-style"
         :class="[
-        direction?'ani-drawer-direction--'+direction:'ani-drawer-direction--left',
+          direction
+            ? 'ani-drawer-direction--' + direction
+            : 'ani-drawer-direction--left'
         ]"
         v-show="drawerOpen"
       >
@@ -19,7 +23,9 @@
       <div
         v-show="drawerOpen"
         class="ani-drawer-cap"
-        :style="`height:${innerHeight}px;width:${innerWidth}px;${blur?blured:''}`"
+        :style="
+          `height:${innerHeight}px;width:${innerWidth}px;${blur ? blured : ''}`
+        "
         @click="handleClickClose"
       ></div>
     </transition>
@@ -34,27 +40,27 @@ export default {
     let vthis = this;
     window.onresize = function() {
       vthis.innerHeight = window.innerHeight;
-      vthis.innerWidth=window.innerWidth;
+      vthis.innerWidth = window.innerWidth;
     };
   },
   name: "AniDrawer",
   data() {
     return {
       innerHeight: 100,
-      innerWidth:100,
+      innerWidth: 100,
       drawerNotClosed: true
     };
   },
-  computed:{
-    blured(){
-      return `backdrop-filter: blur(${this.radius?this.radius:'5'}px);`
+  computed: {
+    blured() {
+      return `backdrop-filter: blur(${this.radius ? this.radius : "5"}px);`;
     }
   },
   props: {
     drawerOpen: Boolean,
     blur: Boolean,
-    direction:String,  // default left
-    radius:Number
+    direction: String, // default left
+    radius: Number
   },
   methods: {
     handleClickClose() {

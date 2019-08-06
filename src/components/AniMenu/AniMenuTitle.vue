@@ -13,7 +13,7 @@ export default {
   props: {
     title: String
   },
-    inject:['direct']
+  inject: ["direct"]
 };
 </script>
 
@@ -25,7 +25,7 @@ export default {
   line-height: 50px;
   width: 100%;
 }
-.ani-menu-title-divider{
- border-bottom: 1px solid rgba(0,0,0,0.2);
+.ani-menu-title-divider {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 </style>

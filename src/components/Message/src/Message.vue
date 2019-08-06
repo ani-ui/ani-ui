@@ -18,7 +18,7 @@ export default {
   width: 400px;
   border-radius: 10px;
   background-color: white;
-  box-shadow: 0 0 30px rgba(0,0,0,0.3);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   position: fixed;
   top: 50px;
@@ -28,23 +28,25 @@ export default {
 /*
 //TODO THIS ANIMATION ONLY FOR TEST
 */
-  @keyframes fade-simple {
-    from{
-      opacity: 0;
-      transform: translateX(400px) scale(0.8);
-    }
-    25%,74%{
-      opacity: 1;
-      transform: translateX(0)  scale(0.8);
-    }
-    33%,66%{
-      opacity: 1;
-      transform: translateX(0)  scale(1);
-    }
-
-    to{
-      opacity: 0;
-      transform: translateX(400px) scale(0.8);
-    }
+@keyframes fade-simple {
+  from {
+    opacity: 0;
+    transform: translateX(400px) scale(0.8);
   }
+  25%,
+  74% {
+    opacity: 1;
+    transform: translateX(0) scale(0.8);
+  }
+  33%,
+  66% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(400px) scale(0.8);
+  }
+}
 </style>

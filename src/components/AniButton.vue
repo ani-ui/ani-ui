@@ -8,7 +8,7 @@
       {
         'is-round': round,
         'is-circle': circle,
-        'is-disable': disable,
+        'is-disable': disable
       }
     ]"
   >
@@ -29,8 +29,8 @@ export default {
     transparent: Boolean,
     round: Boolean,
     circle: Boolean,
-    disable: Boolean,
-  },
+    disable: Boolean
+  }
 };
 </script>
 

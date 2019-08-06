@@ -1,7 +1,7 @@
 <template>
   <div class="ani-follower-style" :style="`top:${clientY}px;left:${clientX}px`">
-    <div style="position: absolute;top: 5px;left: 5px" >
-     <i class="material-icons">{{ icon }}</i>
+    <div style="position: absolute;top: 5px;left: 5px">
+      <i class="material-icons">{{ icon }}</i>
     </div>
   </div>
 </template>
@@ -23,11 +23,11 @@ export default {
       clientY: 0
     };
   },
-  beforeDestroy(){
+  beforeDestroy() {
     document.body.style.cursor = "auto";
   },
   props: {
-    icon:String,
+    icon: String
   }
 };
 </script>

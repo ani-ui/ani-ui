@@ -18,7 +18,8 @@ export default {
   name: "AniBackTop",
   mounted() {
     setInterval(() => {
-      this.hasFloatButton = document.getElementById("ani-float-button") !== null;
+      this.hasFloatButton =
+        document.getElementById("ani-float-button") !== null;
     }, 1000);
     if (!this.target) {
       window.onscroll = () => {
@@ -52,8 +53,9 @@ export default {
     hasFloatButton(value) {
       window.console.log(value);
       if (value) {
-        TweenLite.to("#ani-back-top",0.5, { x: -68,ease: Power3.easeInOut  });
-      } else TweenLite.to("#ani-back-top", 0.5, { x: 0,ease: Power3.easeInOut  });
+        TweenLite.to("#ani-back-top", 0.5, { x: -68, ease: Power3.easeInOut });
+      } else
+        TweenLite.to("#ani-back-top", 0.5, { x: 0, ease: Power3.easeInOut });
     }
   },
   methods: {

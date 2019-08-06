@@ -10,8 +10,8 @@ export default {
   props: {
     direction: String, // vertical && horizontal
     router: Boolean,
-      divider:Boolean,
-      height:Number
+    divider: Boolean,
+    height: Number
   },
   provide() {
     return {
