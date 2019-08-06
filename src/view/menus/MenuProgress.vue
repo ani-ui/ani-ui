@@ -1,6 +1,6 @@
 <template>
     <div style="width: 90%">
-        <h1>进度条</h1>
+        <h1>ani-progress 进度条</h1>
         <card-code-display>
             <ani-progress style="margin-left: 20px" :percent="20"></ani-progress>
         </card-code-display>

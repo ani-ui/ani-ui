@@ -1,6 +1,6 @@
 # ani-ui
 Animate component for vue.js 2.0
-
+![](./logo.png)
 ## Getting Started
 ### using `npm` or `yarn`
 ```shell script
