@@ -1,5 +1,6 @@
 <template>
     <div style="width: 90%">
+        <h1>ani-box 盒子</h1>
         <card-code-display title="基础使用">
             <ani-box >
                 <div style="height: 100px;width: 100px">
