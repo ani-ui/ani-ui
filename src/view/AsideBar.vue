@@ -14,6 +14,7 @@
     <ani-menu-item link="float">浮动按钮</ani-menu-item>
     <ani-menu-item link="box">盒子</ani-menu-item>
     <ani-menu-item link="progress">进度条</ani-menu-item>
+    <ani-menu-item link="dialog">对话框</ani-menu-item>
   </ani-menu>
 </template>
 <script>

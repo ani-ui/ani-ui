@@ -37,10 +37,10 @@ export default {
   mounted() {
     this.innerHeight = window.innerHeight;
     this.innerWidth = window.innerWidth;
-    let vthis = this;
-    window.onresize = function() {
-      vthis.innerHeight = window.innerHeight;
-      vthis.innerWidth = window.innerWidth;
+
+    window.onresize = ()=> {
+      this.innerHeight = window.innerHeight;
+      this.innerWidth = window.innerWidth;
     };
   },
   name: "AniDrawer",
