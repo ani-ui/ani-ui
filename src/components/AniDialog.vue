@@ -11,6 +11,13 @@
       </transition>
       <transition name="fade">
         <div class="ani-dialog-card-style" v-if="visible">
+            <div class="ani-dialog-header--style">
+                <span style="padding-left: 20px">{{ title }}</span>
+                <div class="ani-dialog-close" @click="handleClickClose">
+                    <div class="ani-dialog-close__icon1"></div>
+                    <div class="ani-dialog-close__icon2"></div>
+                </div>
+            </div>
           <slot></slot>
         </div>
       </transition>
@@ -23,12 +30,16 @@ export default {
   name: "AniDialog",
   props: {
     blur: Number,
-    visible: Boolean
+    visible: Boolean,
+      title:String
   },
   methods: {
     handleDialogClose() {
       this.$emit("update:visible", false);
-    }
+    },
+      handleClickClose() {
+          this.$emit("update:visible", false);
+      }
   }
 };
 </script>
@@ -62,5 +73,43 @@ export default {
 }
 .ani-dialog-card-style:active {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.ani-dialog-header--style {
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.ani-dialog-close {
+    height: 20px;
+    width: 20px;
+    right: 16px;
+    top: 10px;
+    position: absolute;
+    transition: all 500ms;
+}
+.ani-dialog-close:hover {
+    transform: rotate(180deg);
+}
+
+.ani-dialog-close__icon1 {
+    height: 3px;
+    width: 20px;
+    transform: rotate(45deg);
+    background-color: #333333;
+    position: absolute;
+    top: 9px;
+}
+.ani-dialog-close__icon2 {
+    height: 3px;
+    width: 20px;
+    top: 9px;
+    transform: rotate(-45deg);
+    background-color: #333333;
+    position: absolute;
 }
 </style>
