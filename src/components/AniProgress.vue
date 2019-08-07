@@ -1,7 +1,7 @@
 <template>
   <div v-if="!circle" class="ani-progress-loading-style">
     <div class="ani-progress-loading-inside" v-if="loading"></div>
-    <div :style="`width:${percent}%`" class="ani-progress-default" v-else></div>
+    <div :style="`width:${animatePercent}%`" class="ani-progress-default" v-else></div>
   </div>
   <div v-else class="ani-progress-circle-loading-style">
     <div class="circle-loading-inside-style">

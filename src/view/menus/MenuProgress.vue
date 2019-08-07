@@ -2,7 +2,9 @@
   <div style="width: 90%">
     <h1>ani-progress 进度条</h1>
     <card-code-display>
-      <ani-progress style="margin-left: 20px" :percent="20"></ani-progress>
+      <ani-progress style="margin-left: 20px" :percent="percentageLine"></ani-progress>
+      <ani-button @click="handleAddLine">add</ani-button>
+      <ani-button @click="handleSubLine">sub</ani-button>
     </card-code-display>
     <card-code-display>
       <ani-progress loading style="margin-left: 20px"></ani-progress>
@@ -31,7 +33,8 @@ export default {
   components: { CardCodeDisplay, AniProgress, AniButton },
   data() {
     return {
-      percentage: 10
+      percentage: 10,
+      percentageLine:10,
     };
   },
   methods: {
@@ -40,6 +43,12 @@ export default {
     },
     handleSub() {
       this.percentage -= 10;
+    },
+    handleAddLine() {
+      this.percentageLine+=10;
+    },
+    handleSubLine() {
+      this.percentageLine-=10;
     }
   }
 };
