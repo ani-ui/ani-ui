@@ -2,7 +2,7 @@
     <div style="width: 90%">
         <h1>ani-tooltip 提示</h1>
         <card-code-display>
-            <ani-tooltip>
+            <ani-tooltip content="tooltip">
                 <ani-button>提示</ani-button>
             </ani-tooltip>
         </card-code-display>
