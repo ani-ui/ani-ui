@@ -15,6 +15,7 @@ import MenuFloatButton from "./view/menus/MenuFloatButton";
 import MenuBox from "./view/menus/MenuBox";
 import MenuProgress from "./view/menus/MenuProgress";
 import MenuDialog from "./view/menus/MenuDialog";
+import MenuTooltip from "./view/menus/MenuTooltip";
 
 Vue.use(Router);
 
@@ -37,6 +38,7 @@ export default new Router({
         { path: "box", component: MenuBox, name: "box" },
         { path: "progress", component: MenuProgress, name: "progress" },
         { path: "dialog", component: MenuDialog, name: "dialog" },
+        { path: "tooltip", component: MenuTooltip, name: "tooltip" },
       ]
     },
     { path: "/about", component: About }
