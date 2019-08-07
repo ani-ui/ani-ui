@@ -1,20 +1,34 @@
 <template>
-  <div>
-    <div
-      class="ani-dialog-style--main"
-      :style="`backdrop-filter: blur(${blur ? blur : 0}px);`"
-    ></div>
-    <div class="ani-dialog-card-style">
-        <slot></slot>
+  <transition name="fade">
+    <div>
+      <transition name="fade">
+        <div
+                v-if="visible"
+          class="ani-dialog-style--main"
+          :style="`backdrop-filter: blur(${blur ? blur : 0}px);`"
+          @click="handleDialogClose"
+        ></div>
+      </transition>
+      <transition name="fade">
+        <div class="ani-dialog-card-style" v-if="visible">
+          <slot></slot>
+        </div>
+      </transition>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script>
 export default {
   name: "AniDialog",
   props: {
-    blur: Number
+    blur: Number,
+    visible: Boolean
+  },
+  methods: {
+    handleDialogClose() {
+      this.$emit("update:visible", false);
+    }
   }
 };
 </script>
@@ -39,14 +53,14 @@ export default {
   background-color: white;
   border-radius: 15px;
   z-index: 15;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: all 500ms;
 }
 
 .ani-dialog-card-style:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 .ani-dialog-card-style:active {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 </style>
