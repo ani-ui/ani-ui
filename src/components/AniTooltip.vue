@@ -1,5 +1,5 @@
 <template>
-  <div @mousemove="handleMouseEnter" @mouseleave="handleMouseLeave">
+  <div class="ani-tooltip-outter-style" @mousemove="handleMouseEnter" @mouseleave="handleMouseLeave">
     <slot></slot>
     <transition name="fade">
         <div v-show="visible" :id="customID" class="ani-tooltip-style-main">
@@ -38,8 +38,8 @@ export default {
     handleMouseEnter(e) {
         this.visible=true
         let tooltipDiv=document.getElementById(this.customID).style
-        tooltipDiv.top=`${(e.clientY+5).toString()}px`
-        tooltipDiv.left=`${(e.clientX+5).toString()}px`
+        tooltipDiv.top=`${(e.clientY+10).toString()}px`
+        tooltipDiv.left=`${(e.clientX+10).toString()}px`
     },
       handleMouseLeave() {
         this.visible=false
@@ -58,5 +58,10 @@ export default {
   position: fixed;
     color: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.ani-tooltip-outter-style {
+    width: auto;
+    display: inline-block;
 }
 </style>
