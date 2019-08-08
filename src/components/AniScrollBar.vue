@@ -18,10 +18,10 @@ export default {
   width: 5px;
 }
 .ani-scroll-bar-style::-webkit-scrollbar-track {
+  box-shadow:inset 0 0 5px rgba(0,0,0,0.2);
 }
 .ani-scroll-bar-style::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
   border-radius: 10px;
   outline: none;
 }
