@@ -2,7 +2,7 @@
     <div style="width: 90%">
         <h1>ani-bottom-bar 底部导航栏</h1>
         <card-code-display>
-            <ani-bottom-bar :blur="5">
+            <ani-bottom-bar >
                 <ani-bottom-bar-item></ani-bottom-bar-item>
             </ani-bottom-bar>
         </card-code-display>

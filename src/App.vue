@@ -6,7 +6,9 @@
       v-if="$store.state.mouseFollow"
     ></ani-follower>
     <ani-back-top target="main-over"></ani-back-top>
-    <ani-drawer :drawer-open.sync="menuOpened"></ani-drawer>
+    <ani-drawer :drawer-open.sync="menuOpened" direction="bottom">
+      <img src="./assets/logo-main.png" alt="" height="300">
+    </ani-drawer>
     <ani-header :menu-opened-prop.sync="menuOpened" title="Ani UI">
       <ani-header-link router link="/">主页</ani-header-link>
       <ani-header-link router link="/component">组件</ani-header-link>

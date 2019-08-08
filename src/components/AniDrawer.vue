@@ -17,6 +17,7 @@
           <div class="ani-drawer-close__icon1"></div>
           <div class="ani-drawer-close__icon2"></div>
         </div>
+        <slot></slot>
       </div>
     </transition>
     <transition name="fade">
