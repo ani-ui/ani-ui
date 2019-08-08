@@ -26,3 +26,9 @@ yarn add ani-ui@latest
 ```html
 <i class="material-icons">face</i>
 ```
+## 源代码许可
+###  `GNU GENERAL PUBLIC LICENSE Version 3`
+查看 [源代码许可](./LICENSE) 文件
+
+## 作者
+[laiiihz](https://github.com/laiiihz)
