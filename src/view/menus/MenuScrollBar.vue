@@ -1,7 +1,7 @@
 <template>
     <div style="width: 90%">
         <h1>ani-scroll-bar 滚动条</h1>
-        <card-code-display>
+        <card-code-display :code="codeScroll">
             <ani-scroll-bar style="height: 200px;width: 50%">
                 <div>
                     <span>鼠标滚动</span>
@@ -18,7 +18,19 @@
     import AniScrollBar from "../../components/AniScrollBar";
     export default {
         name: "MenuScrollBar",
-        components: {CardCodeDisplay,AniScrollBar}
+        components: {CardCodeDisplay,AniScrollBar},
+        data(){
+            return {
+                codeScroll:
+`<ani-scroll-bar style="height: 200px;width: 50%">
+    <div>
+        <span>鼠标滚动</span>
+        <div style="height: 1000px"></div>
+        <i class="material-icons">favorite</i>
+    </div>
+</ani-scroll-bar>`
+            }
+        },
     }
 </script>
 
