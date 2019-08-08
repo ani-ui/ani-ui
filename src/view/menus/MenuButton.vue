@@ -19,7 +19,10 @@
         title="透明按钮"
         code="<ani-button transparent>透明按钮</ani-button>"
       >
-        <ani-button transparent>透明按钮</ani-button>
+        <div style="height: 100px;width: 100px;background-color:pink;border-radius: 15px">
+          <ani-button transparent style="margin-top: 35px">透明按钮</ani-button>
+        </div>
+
       </card-code-display>
       <card-code-display
         title="按钮禁用"
@@ -47,12 +50,7 @@
     </div>
     <api-docs>
       <api-child
-        v-for="item in apiChildren"
-        :key="item.name"
-        :name="item.name"
-        :type="item.type"
-        :value="item.value"
-        :describe="item.describe"
+        :value="apiChildren"
       ></api-child>
     </api-docs>
   </div>
