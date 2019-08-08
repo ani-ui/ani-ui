@@ -1,7 +1,7 @@
 <template>
     <div style="width: 90%">
         <h1>ani-switch 开关</h1>
-        <card-code-display>
+        <card-code-display :code="codeSwitch" :js="codeSwitchJs">
             <ani-switch v-model="switchValue"></ani-switch>
             <span>{{ switchValue}}</span>
         </card-code-display>
@@ -17,6 +17,12 @@
         data(){
             return {
                 switchValue:false,
+                codeSwitch:`<ani-switch v-model="switchValue"></ani-switch>`,
+                codeSwitchJs:`data(){
+    return {
+        switchValue:false,
+    }
+},`
             }
         },
     }

@@ -6,7 +6,7 @@
         <ani-header-link>TEST</ani-header-link>
       </ani-header>
     </card-code-display>
-    <card-code-display title="侧栏和主界面">
+    <card-code-display title="侧栏和主界面" :code="codeSide">
       <ani-content>
         <ani-side-bar><div style="height: 100px">Side Bar</div></ani-side-bar>
         <ani-main
@@ -43,7 +43,15 @@ export default {
       codeHeader: `
 <ani-header>
     <ani-header-link>TEST</ani-header-link>
-</ani-header>`
+</ani-header>`,
+      codeSide: `<ani-content>
+  <ani-side-bar><div style="height: 100px">Side Bar</div></ani-side-bar>
+  <ani-main
+  ><div style="height: 100px;background-color:rgba(0,0,0,0.2);">
+    Main
+  </div></ani-main
+  >
+</ani-content>`
     };
   }
 };
