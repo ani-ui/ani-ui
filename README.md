@@ -28,3 +28,10 @@ exp. face icon
 ```html
 <i class="material-icons">face</i>
 ```
+
+## License
+###  `GNU GENERAL PUBLIC LICENSE Version 3`
+view [License](./LICENSE) file
+
+## Author
+[laiiihz](https://github.com/laiiihz)
