@@ -56,7 +56,7 @@ export default {
   text-align: center;
 }
 .ani-show-code-arrow-down {
-  transform: translateY(6px) translateX(40px);
+  transform:  translateX(40px);
   transition: all 500ms;
 }
 .ani-show-code-text {
@@ -66,7 +66,7 @@ export default {
   transition: all 500ms;
 }
 .ani-code-block--bottom:hover .ani-show-code-arrow-down {
-  transform: translateY(6px) translateX(0px);
+  transform:  translateX(0px);
 }
 .ani-code-block--bottom:hover .ani-show-code-text {
   transform: translateX(0px);

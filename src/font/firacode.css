@@ -44,3 +44,9 @@
   font-weight: normal;
   font-style: normal;
 }
+
+.material-icons {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateY(-0.1em);
+}

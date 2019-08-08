@@ -14,6 +14,7 @@ export default {
     .ani-bottom-bar-item__style {
         width: 64px;
         height: 64px;
+        line-height: 64px;
         background-color: #fff;
         display: inline-block;
     }

@@ -6,23 +6,21 @@
 
 <script>
 export default {
-  name: "AniScrollBar"
+  name: "AniScrollBar",
 };
 </script>
 
 <style scoped>
 .ani-scroll-bar-style {
-  height: 200px;
-  width: 200px;
   overflow-y: auto;
 }
 .ani-scroll-bar-style::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 .ani-scroll-bar-style::-webkit-scrollbar-track {
 }
 .ani-scroll-bar-style::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   outline: none;
 }
