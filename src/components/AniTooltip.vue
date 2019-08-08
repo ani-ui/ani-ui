@@ -10,7 +10,10 @@
         v-show="visible"
         :id="customID"
         class="ani-tooltip-style-main"
-        :class="light ? 'ani-tooltip___light' : 'ani-tooltip___dark'"
+        :class="[
+        light ? 'ani-tooltip___light' : 'ani-tooltip___dark',
+        ]"
+        :style="`backdrop-filter: blur(${blur?blur:0}px) `"
       >
         <span>{{ content }}</span>
       </div>
@@ -41,7 +44,8 @@ export default {
   },
   props: {
     content: String,
-    light: Boolean
+    light: Boolean,
+    blur:Number,
   },
   methods: {
     handleMouseEnter(e) {
@@ -75,10 +79,10 @@ export default {
 }
 .ani-tooltip___dark {
   color: white;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .ani-tooltip___light {
     color: black;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 </style>

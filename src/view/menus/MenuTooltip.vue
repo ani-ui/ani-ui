@@ -7,8 +7,13 @@
             </ani-tooltip>
         </card-code-display>
         <card-code-display>
-            <ani-tooltip content="tooltip" light>
+            <ani-tooltip content="tooltip" light >
                 <ani-button>亮色主题</ani-button>
+            </ani-tooltip>
+        </card-code-display>
+        <card-code-display>
+            <ani-tooltip content="tooltip" :blur="3">
+                <ani-button>模糊</ani-button>
             </ani-tooltip>
         </card-code-display>
     </div>
