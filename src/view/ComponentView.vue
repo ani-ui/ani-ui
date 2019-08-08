@@ -1,7 +1,8 @@
 <template>
   <ani-content>
-    <ani-side-bar :width="320">
+    <ani-side-bar :width="320" :style="`height: ${height}px;overflow-y: auto;overflow-x:hidden`">
       <aside-bar />
+
     </ani-side-bar>
     <ani-main style="width: 400px">
       <div id="main-over" :style="`height: ${height}px;overflow-y: auto`">
