@@ -56,6 +56,12 @@ export default {
   background-color: rgb(200, 200, 200);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
+.ani-switch--style
+input[type="checkbox"]:checked
++ .ani-switch-real-switch-style:active {
+    background-color: rgb(150, 150, 150);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
 .ani-switch-real-switch-style {
   position: absolute;
   top: -2px;
@@ -69,5 +75,9 @@ export default {
 .ani-switch-real-switch-style:hover {
   background-color: rgb(150, 150, 150);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+.ani-switch-real-switch-style:active {
+    background-color: rgb(100, 100, 100);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
 }
 </style>
