@@ -20,9 +20,6 @@
     <ani-menu-item link="checkbox">选框</ani-menu-item>
     <ani-menu-item link="bottombar">底部导航栏</ani-menu-item>
 
-<ani-button @click="handleTestClick">
-  test
-</ani-button>
       <div style="height: 200px;"> </div>
   </ani-menu>
 </template>
@@ -30,10 +27,9 @@
 import AniMenu from "../components/AniMenu/AniMenu";
 import AniMenuItem from "../components/AniMenu/AniMenuItem";
 import AniMenuTitle from "../components/AniMenu/AniMenuTitle";
-import AniButton from "../components/AniButton";
 export default {
   name: "aside-bar",
-  components: { AniMenu, AniMenuItem, AniMenuTitle,AniButton },
+  components: { AniMenu, AniMenuItem, AniMenuTitle },
 
   methods: {
     handleTestClick() {
