@@ -19,6 +19,7 @@ import MenuTooltip from "./view/menus/MenuTooltip";
 import MenuSwitch from "./view/menus/MenuSwitch";
 import MenuCheckbox from "./view/menus/MenuCheckbox";
 import MenuBottomBar from "./view/menus/MenuBottomBar";
+import MenuScrollBar from "./view/menus/MenuScrollBar";
 
 Vue.use(Router);
 
@@ -45,6 +46,7 @@ export default new Router({
         { path: "switch", component: MenuSwitch, name: "switch" },
         { path: "checkbox", component: MenuCheckbox, name: "checkbox" },
         { path: "bottombar", component: MenuBottomBar, name: "bottombar" },
+        { path: "scrollbar", component: MenuScrollBar, name: "scrollbar" },
       ]
     },
     { path: "/about", component: About }
