@@ -20,7 +20,8 @@ export default {
 .ani-scroll-bar-style::-webkit-scrollbar-track {
 }
 .ani-scroll-bar-style::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
   border-radius: 10px;
   outline: none;
 }
