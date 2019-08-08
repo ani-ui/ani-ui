@@ -32,7 +32,9 @@
       :style="
         `height:${direct.height ? direct.height : 40}px;line-height:${
           direct.height ? direct.height : 40
-        }px`
+        }px;
+        ${$route.name===link?'background-color: rgba(0, 0, 0, 0.5);color:white':''}
+        `
       "
     >
       <div style="margin-left: 32px">
