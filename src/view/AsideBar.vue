@@ -17,6 +17,7 @@
     <ani-menu-item link="dialog">对话框</ani-menu-item>
     <ani-menu-item link="tooltip">提示</ani-menu-item>
     <ani-menu-item link="switch">开关</ani-menu-item>
+    <ani-menu-item link="checkbox">选框</ani-menu-item>
   </ani-menu>
 </template>
 <script>

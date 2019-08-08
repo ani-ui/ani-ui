@@ -18,6 +18,10 @@ import AniBox from "../components/AniBox";
 import AniRow from "../components/Row/index";
 import AniCol from "../components/Col/index";
 import AniFloatButton from "../components/AniFloatButton/index";
+import AniCheckbox from "../components/AniCheckbox";
+import AniTooltip from "../components/AniTooltip";
+import AniDialog from "../components/AniDialog";
+import AniSwitch from "../components/AniSwitch";
 import "../less/main.less";
 
 const Components = {
@@ -38,7 +42,11 @@ const Components = {
   AniCol,
   AniFloatButton,
   AniBox,
-  AniProgress
+  AniProgress,
+  AniDialog,
+  AniTooltip,
+  AniSwitch,
+  AniCheckbox
 };
 Vue.prototype.$message = Message;
 Object.keys(Components).forEach(name => {

@@ -17,6 +17,7 @@ import MenuProgress from "./view/menus/MenuProgress";
 import MenuDialog from "./view/menus/MenuDialog";
 import MenuTooltip from "./view/menus/MenuTooltip";
 import MenuSwitch from "./view/menus/MenuSwitch";
+import MenuCheckbox from "./view/menus/MenuCheckbox";
 
 Vue.use(Router);
 
@@ -41,6 +42,7 @@ export default new Router({
         { path: "dialog", component: MenuDialog, name: "dialog" },
         { path: "tooltip", component: MenuTooltip, name: "tooltip" },
         { path: "switch", component: MenuSwitch, name: "switch" },
+        { path: "checkbox", component: MenuCheckbox, name: "checkbox" },
       ]
     },
     { path: "/about", component: About }
