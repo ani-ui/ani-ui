@@ -22,6 +22,7 @@ import MenuBottomBar from "./view/menus/MenuBottomBar";
 import MenuScrollBar from "./view/menus/MenuScrollBar";
 import Design from "./view/Design";
 import NotFound from "./view/NotFound";
+import MenuTopLoading from "./view/menus/MenuTopLoading";
 
 Vue.use(Router);
 
@@ -49,6 +50,7 @@ export default new Router({
         { path: "checkbox", component: MenuCheckbox, name: "checkbox" },
         { path: "bottombar", component: MenuBottomBar, name: "bottombar" },
         { path: "scrollbar", component: MenuScrollBar, name: "scrollbar" },
+        { path: "toploading", component: MenuTopLoading, name: "toploading" },
       ]
     },
     { path: "/about", component: About },

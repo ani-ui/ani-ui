@@ -9,11 +9,11 @@
     <card-code-display title="侧栏和主界面" :code="codeSide">
       <ani-content>
         <ani-side-bar><div style="height: 100px">Side Bar</div></ani-side-bar>
-        <ani-main
-          ><div style="height: 100px;background-color:rgba(0,0,0,0.2);">
+        <ani-main>
+          <div style="height: 100px;background-color:rgba(0,0,0,0.2);">
             Main
-          </div></ani-main
-        >
+          </div>
+        </ani-main>
       </ani-content>
     </card-code-display>
   </div>
