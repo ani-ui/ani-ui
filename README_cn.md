@@ -1,9 +1,9 @@
 # ani-ui
 Animate component for vue.js 2.0
 ![](./logo.png)
-### [中文手册](./README_cn.md)
-## Getting Started
-### using `npm` or `yarn`
+### [English Docs](./README.md)
+## 开始入手
+### 使用 `npm` 或 `yarn` 安装
 ```shell script
 npm install ani-ui@latest
 ```
@@ -11,20 +11,18 @@ npm install ani-ui@latest
 yarn add ani-ui@latest
 ```
 
-### using CDN
+### 使用 CDN 的方式安装
 ```html
 <link rel="stylesheet" href="https://unpkg.com/ani-ui/dist/ani-ui.css">
 <script src="https://unpkg.com/ani-ui/dist/ani-ui.common.js"/>
 ```
-
-## using Material Design Icons
-add this code to your `./public/index.html`
+## 使用质感设计图标
 ```html
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css" rel="stylesheet">
 ```
-Using the icons in vue or html
+在vue或html中使用此图标
 
-exp. face icon
+比如face图标
 ```html
 <i class="material-icons">face</i>
 ```
