@@ -15,8 +15,9 @@ export default {
         width: 64px;
         height: 64px;
         line-height: 64px;
-        background-color: #fff;
+        background-color: transparent;
         display: inline-block;
+        transition: all 500ms;
     }
     .ani-bottom-bar-item__style:hover{
         background-color: rgba(0,0,0,0.2);
