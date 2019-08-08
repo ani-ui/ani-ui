@@ -10,6 +10,7 @@
     </div>
     <h2>通过 CDN 安装</h2>
     <div>
+
       <ani-card>
         <prism-editor readonly :code="codeCss" language="markup"></prism-editor>
         <prism-editor
@@ -19,7 +20,12 @@
         ></prism-editor>
       </ani-card>
     </div>
-
+    <h2>添加Material Icons</h2>
+    <div>
+      <ani-card>
+        <prism-editor language="markup" :code="codeFont"></prism-editor>
+      </ani-card>
+    </div>
     <div style="height: 1000px"></div>
   </div>
 </template>
@@ -42,7 +48,8 @@ export default {
       codeNpm: `npm install ani-ui@latest`,
       codeYarn: `yarn add ani-ui@latest`,
       codeCss: `<link rel="stylesheet" href="https://unpkg.com/ani-ui/dist/ani-ui.css">`,
-      codeScript: `<script src="https://unpkg.com/ani-ui/dist/ani-ui.common.js"/>`
+      codeScript: `<script src="https://unpkg.com/ani-ui/dist/ani-ui.common.js"/>`,
+      codeFont:`<link href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css" rel="stylesheet">`,
     };
   }
 };
