@@ -29,6 +29,10 @@ import AniPager from "../components/AniPager";
 import AniRate from "../components/AniRate";
 import AniDropDown from "../components/AniDropDown";
 import AniDropDownItem from "../components/AniDropDownItem";
+import AniRouterChoose from "../components/AniRouterChoose";
+import AniMenu from "../components/AniMenu/AniMenu";
+import AniMenuItem from "../components/AniMenu/AniMenuItem";
+import AniMenuTitle from "../components/AniMenu/AniMenuTitle";
 
 import "../less/main.less";
 import "../less/colorSchema.less";
@@ -62,7 +66,11 @@ const Components = {
   AniRate,
   AniTopLoading,
   AniDropDownItem,
-  AniDropDown
+  AniDropDown,
+  AniRouterChoose,
+  AniMenu,
+  AniMenuTitle,
+  AniMenuItem
 };
 Vue.prototype.$message = Message;
 Object.keys(Components).forEach(name => {

@@ -26,6 +26,9 @@ import MenuTopLoading from "./view/menus/MenuTopLoading";
 import MenuPager from "./view/menus/MenuPager";
 import MenuRate from "./view/menus/MenuRate";
 import MenuDropDown from "./view/menus/MenuDropDown";
+import MenuRouterChoose from "./view/menus/MenuRouterChoose";
+import routerA from "./view/menus/RouterChoose/routerA";
+import routerB from "./view/menus/RouterChoose/routerB";
 
 Vue.use(Router);
 
@@ -35,6 +38,8 @@ export default new Router({
     {
       path: "/component",
       component: ComponentView,
+      name:"component",
+      redirect:{name:'install'},
       children: [
         { path: "", component: MenuInstall, name: "install" },
         { path: "button", component: MenuButton, name: "button" },
@@ -57,10 +62,19 @@ export default new Router({
         { path: "pager", component: MenuPager, name: "pager" },
         { path: "rate", component: MenuRate, name: "rate" },
         { path: "dropdown", component: MenuDropDown, name: "dropdown" },
+        {
+          path: "routerchoose",
+          component: MenuRouterChoose,
+          name: "routerchoose",
+          children: [
+            { path: "aaa", component: routerA, name: "aaa" },
+            { path: "bbb", component: routerB, name: "bbb" }
+          ]
+        }
       ]
     },
     { path: "/about", component: About },
     { path: "/design", component: Design },
-    { path: "/*", component: NotFound },
+    { path: "/*", component: NotFound }
   ]
 });
