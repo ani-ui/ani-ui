@@ -1,7 +1,7 @@
 # ani-ui
-Animate component for vue.js 2.0
-![](./logo.png)
+使用vue.js 2.0构建的动效组件
 ### [English Docs](./README.md)
+![](./logo.png)
 ## 开始入手
 ### 使用 `npm` 或 `yarn` 安装
 ```shell script
