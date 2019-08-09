@@ -22,6 +22,12 @@ import AniCheckbox from "../components/AniCheckbox";
 import AniTooltip from "../components/AniTooltip";
 import AniDialog from "../components/AniDialog";
 import AniSwitch from "../components/AniSwitch";
+import AniBottomBar from "../components/AniBottomBar";
+import AniBottomBarItem from "../components/AniBottomBarItem";
+import AniTopLoading from "../components/AniTopLoading";
+import AniPager from "../components/AniPager";
+import AniRate from "../components/AniRate";
+
 import "../less/main.less";
 
 const Components = {
@@ -46,7 +52,12 @@ const Components = {
   AniDialog,
   AniTooltip,
   AniSwitch,
-  AniCheckbox
+  AniCheckbox,
+  AniBottomBarItem,
+  AniBottomBar,
+  AniPager,
+  AniRate,
+  AniTopLoading
 };
 Vue.prototype.$message = Message;
 Object.keys(Components).forEach(name => {
