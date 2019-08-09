@@ -27,8 +27,11 @@ import AniBottomBarItem from "../components/AniBottomBarItem";
 import AniTopLoading from "../components/AniTopLoading";
 import AniPager from "../components/AniPager";
 import AniRate from "../components/AniRate";
+import AniDropDown from "../components/AniDropDown";
+import AniDropDownItem from "../components/AniDropDownItem";
 
 import "../less/main.less";
+import "../less/colorSchema.less";
 
 const Components = {
   AniButton,
@@ -57,7 +60,9 @@ const Components = {
   AniBottomBar,
   AniPager,
   AniRate,
-  AniTopLoading
+  AniTopLoading,
+  AniDropDownItem,
+  AniDropDown
 };
 Vue.prototype.$message = Message;
 Object.keys(Components).forEach(name => {

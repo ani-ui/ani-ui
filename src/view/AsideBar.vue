@@ -23,6 +23,7 @@
     <ani-menu-item link="toploading">顶部加载条</ani-menu-item>
     <ani-menu-item link="pager">分页器</ani-menu-item>
     <ani-menu-item link="rate">评分栏</ani-menu-item>
+    <ani-menu-item link="dropdown">下拉菜单</ani-menu-item>
 
       <div style="height: 64px;"> </div>
   </ani-menu>
