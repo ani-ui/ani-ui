@@ -26,7 +26,6 @@
         <prism-editor language="markup" :code="codeFont"></prism-editor>
       </ani-card>
     </div>
-    <div style="height: 1000px"></div>
   </div>
 </template>
 

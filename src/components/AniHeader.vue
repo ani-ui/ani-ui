@@ -7,9 +7,9 @@
         id="title-icon"
         @click="handleClickMenu"
       >
-        <div id="menu-1" class="menu-block"></div>
-        <div id="menu-2" class="menu-block"></div>
-        <div id="menu-3" class="menu-block"></div>
+        <div class="menu-block menu-1"></div>
+        <div class="menu-block menu-2"></div>
+        <div class="menu-block menu-3"></div>
       </div>
     </div>
     <div class="ani-header-title">
@@ -39,25 +39,25 @@ export default {
   watch: {
     menuOpenedProp(value) {
       if (value) {
-        TweenLite.to("#menu-1", 0.5, {
+        TweenLite.to(".menu-1", 0.5, {
           rotation: 45,
           y: 10,
           ease: Power3.easeInOut
         });
-        TweenLite.to("#menu-2", 0.5, { opacity: 0, ease: Power3.easeInOut });
-        TweenLite.to("#menu-3", 0.5, {
+        TweenLite.to(".menu-2", 0.5, { opacity: 0, ease: Power3.easeInOut });
+        TweenLite.to(".menu-3", 0.5, {
           rotation: -45,
           y: -10,
           ease: Power3.easeInOut
         });
       } else {
-        TweenLite.to("#menu-1", 0.5, {
+        TweenLite.to(".menu-1", 0.5, {
           rotation: 0,
           y: 0,
           ease: Power3.easeInOut
         });
-        TweenLite.to("#menu-2", 0.5, { opacity: 1, ease: Power3.easeInOut });
-        TweenLite.to("#menu-3", 0.5, {
+        TweenLite.to(".menu-2", 0.5, { opacity: 1, ease: Power3.easeInOut });
+        TweenLite.to(".menu-3", 0.5, {
           rotation: 0,
           y: 0,
           ease: Power3.easeInOut
@@ -69,13 +69,13 @@ export default {
 </script>
 
 <style>
-#menu-1 {
+.menu-1 {
   top: 6px;
 }
-#menu-2 {
+.menu-2 {
   top: 16px;
 }
-#menu-3 {
+.menu-3 {
   top: 26px;
 }
 .ani-header-ops {
@@ -87,19 +87,19 @@ export default {
   height: 64px;
   width: 64px;
   border-radius: 64px;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   position: absolute;
   opacity: 0;
   transform-origin: 32px 32px;
   transform: scale(0.1);
   transition: all 500ms;
 }
-  .ani-header-drawer-button:hover .ani-header-drawer-button-bg{
-    opacity: 1;
-    transform-origin: 32px 32px;
-    transform: scale(0.9);
-  }
-.ani-header-drawer-button:active .ani-header-drawer-button-bg{
-  background-color: rgba(0,0,0,0.6);
+.ani-header-drawer-button:hover .ani-header-drawer-button-bg {
+  opacity: 1;
+  transform-origin: 32px 32px;
+  transform: scale(0.9);
+}
+.ani-header-drawer-button:active .ani-header-drawer-button-bg {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 </style>

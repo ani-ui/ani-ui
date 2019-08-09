@@ -6,11 +6,11 @@
       </ani-side-bar>
     </ani-scroll-bar>
     <ani-main style="width: 400px">
-      <div id="main-over" :style="`height: ${height}px;overflow-y: auto`">
+      <ani-scroll-bar id="main-over" :style="`height: ${height}px;overflow-y: auto`">
         <transition name="fade" mode="out-in">
           <router-view></router-view>
         </transition>
-      </div>
+      </ani-scroll-bar>
     </ani-main>
   </ani-content>
 </template>
