@@ -23,15 +23,15 @@ export default {
   border-radius: 48px;
   width: 48px;
   right: 20px;
-  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   transition: all 500ms;
 }
 .ani-float-button-main-style:hover {
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.4);
   background-color: rgba(0, 0, 0, 0.2);
 }
 .ani-float-button-main-style:active {
-  box-shadow: 1px 1px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 15px;
 }

@@ -81,15 +81,15 @@ export default {
   border-radius: 48px;
   line-height: 48px;
   text-align: center;
-  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   transition: all 500ms;
 }
 .ani-back-top-style:hover {
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.4);
   background-color: rgba(0, 0, 0, 0.2);
 }
 .ani-back-top-style:active {
-  box-shadow: 1px 1px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 15px;
 }
