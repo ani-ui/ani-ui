@@ -16,19 +16,18 @@ export default {
     prop: "checked",
     event: "change"
   },
-    props:{
-      checked:Boolean
-    },
-    methods: {
-        handleChange() {
-            if(this.checked){
-                this.$emit('change',false)
-            }else {
-                this.$emit('change',true)
-            }
-
-        }
+  props: {
+    checked: Boolean
+  },
+  methods: {
+    handleChange() {
+      if (this.checked) {
+        this.$emit("change", false);
+      } else {
+        this.$emit("change", true);
+      }
     }
+  }
 };
 </script>
 
@@ -57,10 +56,10 @@ export default {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 .ani-switch--style
-input[type="checkbox"]:checked
-+ .ani-switch-real-switch-style:active {
-    background-color: rgb(150, 150, 150);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  input[type="checkbox"]:checked
+  + .ani-switch-real-switch-style:active {
+  background-color: rgb(150, 150, 150);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
 }
 .ani-switch-real-switch-style {
   position: absolute;
@@ -77,7 +76,8 @@ input[type="checkbox"]:checked
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 .ani-switch-real-switch-style:active {
-    background-color: rgb(100, 100, 100);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  background-color: rgb(100, 100, 100);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
 }
 </style>
