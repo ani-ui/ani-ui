@@ -17,6 +17,7 @@ export default {
 
 <style>
 .text-icon--icon {
+  z-index: 1;
   font-size: 20px;
   line-height: 28px;
   vertical-align: middle;
@@ -27,6 +28,7 @@ export default {
   transition: opacity 500ms, transform 500ms;
 }
 .text-icon--text {
+  z-index: 1;
   font-size: 16px;
   line-height: 28px;
   margin-bottom: 8px;
@@ -37,6 +39,7 @@ export default {
   transition: padding-left 500ms, padding-right 500ms;
 }
 .ani-icon-text-style {
+  z-index: 1;
   position: relative;
 }
 .ani-icon-text-style:hover .text-icon--text {

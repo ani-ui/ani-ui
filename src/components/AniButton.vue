@@ -41,6 +41,7 @@ export default {
   */
 .ani-button-default-style {
   outline: none;
+  position: relative;
   background-color: @btn-default;
   border-radius: 5px;
   color: black;
@@ -54,5 +55,24 @@ export default {
   padding-left: 10px;
   padding-right: 10px;
   display: inline-block;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.ani-button-default-style::after{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: black;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+  transition: all 500ms;
+  transform: translate(-50%,-50%)
+}
+.ani-button-default-style:hover::after{
+opacity: 0.1;
+  width:100%;
+  height: 50px;
 }
 </style>
