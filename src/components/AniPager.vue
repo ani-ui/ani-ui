@@ -69,32 +69,41 @@ export default {
     allPage: Number,
     currentPage: Number
   },
+    mounted(){
+      if(this.allPage<=10){
+          this.rightMore=false
+      }
+    },
   computed: {
     firstArrow() {
       return this.currentPage !== 1;
     },
     lastArrow() {
-      return this.currentPage !== this.allPage && this.allPage >= 10;
+      return this.currentPage !== this.allPage
     },
     displayPage() {
       let array = [];
-      if (this.currentPage < 5) {
+      if(this.allPage<=10){
+          for (let i = 2; i < this.allPage; i++) {
+              array.push(i);
+          }
+      }
+      else if (this.currentPage < 5) {
         for (let i = 2; i < 10; i++) {
           array.push(i);
         }
-      }else if(this.currentPage === 5){
+      }
+      else if(this.currentPage === 5){
           for (let i = 2; i < 10; i++) {
               array.push(i);
           }
       }
-      else if (
-        this.currentPage > 5 &&
-        this.currentPage < this.allPage - 5
-      ) {
+      else if (this.currentPage > 5 &&this.currentPage < this.allPage - 5) {
         for (let i = this.currentPage - 3; i < this.currentPage + 4; i++) {
           array.push(i);
         }
-      }else if(this.allPage - this.currentPage === 5){
+      }
+      else if(this.allPage - this.currentPage === 5){
           for (let i = this.currentPage - 3; i < this.currentPage + 4; i++) {
               array.push(i);
           }
@@ -109,8 +118,13 @@ export default {
   },
   watch: {
     currentPage(value) {
-      this.leftMore = value > 5;
-      this.rightMore = value < this.allPage - 4;
+        if(this.allPage>10){
+            this.leftMore = value > 5;
+            this.rightMore = value < this.allPage - 4;
+        }else{
+            this.rightMore=false
+        }
+
     }
   },
   methods: {

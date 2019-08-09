@@ -2,7 +2,7 @@
     <div style="width: 90%">
         <h1>ani-pager 分页器</h1>
         <card-code-display>
-            <ani-pager :all-page="20" :current-page.sync="currentPage"></ani-pager>
+            <ani-pager :all-page="10" :current-page.sync="currentPage"></ani-pager>
         </card-code-display>
     </div>
 </template>
@@ -15,7 +15,7 @@
         components: {AniPager, CardCodeDisplay},
         data(){
             return {
-                currentPage:5,
+                currentPage:1,
             }
         },
     }
