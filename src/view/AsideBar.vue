@@ -22,8 +22,9 @@
     <ani-menu-item link="scrollbar">滚动条</ani-menu-item>
     <ani-menu-item link="toploading">顶部加载条</ani-menu-item>
     <ani-menu-item link="pager">分页器</ani-menu-item>
+    <ani-menu-item link="rate">评分栏</ani-menu-item>
 
-      <div style="height: 200px;"> </div>
+      <div style="height: 64px;"> </div>
   </ani-menu>
 </template>
 <script>

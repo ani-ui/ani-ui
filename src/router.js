@@ -24,6 +24,7 @@ import Design from "./view/Design";
 import NotFound from "./view/NotFound";
 import MenuTopLoading from "./view/menus/MenuTopLoading";
 import MenuPager from "./view/menus/MenuPager";
+import MenuRate from "./view/menus/MenuRate";
 
 Vue.use(Router);
 
@@ -53,6 +54,7 @@ export default new Router({
         { path: "scrollbar", component: MenuScrollBar, name: "scrollbar" },
         { path: "toploading", component: MenuTopLoading, name: "toploading" },
         { path: "pager", component: MenuPager, name: "pager" },
+        { path: "rate", component: MenuRate, name: "rate" },
       ]
     },
     { path: "/about", component: About },
