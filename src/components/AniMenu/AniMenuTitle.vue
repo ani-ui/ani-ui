@@ -3,7 +3,7 @@
     class="ani-menu-item-title-style"
     :class="[direct.divider ? 'ani-menu-title-divider' : '']"
   >
-    <span style="margin-left: 16px;font-size: 20px">{{ title }}</span>
+    <span class="ani-menu-title-span__style">{{ title }}</span>
   </div>
 </template>
 
@@ -27,5 +27,15 @@ export default {
 }
 .ani-menu-title-divider {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.ani-menu-title-span__style {
+ padding-left: 16px;
+  font-size: 20px;
+  transition: all 500ms;
+  user-select: none;
+}
+.ani-menu-title-span__style:hover {
+  padding-left: 24px;
 }
 </style>

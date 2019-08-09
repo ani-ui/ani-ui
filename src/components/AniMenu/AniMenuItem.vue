@@ -37,7 +37,7 @@
         `
       "
     >
-      <div style="margin-left: 32px">
+      <div class="ani-menu-item-padding__style">
         <slot></slot>
       </div>
     </div>
@@ -81,4 +81,12 @@ export default {
 .ani-menu-divider {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
+
+.ani-menu-item-padding__style {
+  padding-left: 32px;
+  transition: all 500ms;
+}
+  .ani-menu-item-padding__style:hover{
+    padding-left: 40px;
+  }
 </style>
