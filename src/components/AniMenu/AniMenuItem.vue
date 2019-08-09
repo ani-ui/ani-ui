@@ -71,12 +71,30 @@ export default {
 .ani-menu-item-base-style {
   display: inline-block;
   transition: all 500ms;
+  position: relative;
+  user-select: none;
 }
-.ani-menu-item-base-style:hover {
-  background-color: rgba(0, 0, 0, 0.2);
+.ani-menu-item-base-style::after{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) ;
+  opacity: 0;
+  background-color: rgba(0,0,0,0.2);
+  z-index: 1;
+  transition: all 500ms;
+}
+.ani-menu-item-base-style:hover::after{
+  opacity: 1;
+  height: 100%;
+  width: 100%;
 }
 .ani-menu-item-base-style:active {
   background-color: rgba(0, 0, 0, 0.5);
+  color: white;
 }
 .ani-menu-divider {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -84,6 +102,8 @@ export default {
 
 .ani-menu-item-padding__style {
   padding-left: 32px;
+  position: relative;
+  z-index: 2;
   transition: all 500ms;
 }
   .ani-menu-item-padding__style:hover{

@@ -1,6 +1,7 @@
 <template>
   <div class="ani-header-style">
     <div class="ani-header-drawer-button">
+      <div class="ani-header-drawer-button-bg"></div>
       <div
         class="ani-header-button__inner"
         id="title-icon"
@@ -80,5 +81,25 @@ export default {
 .ani-header-ops {
   float: right;
   height: 64px;
+}
+
+.ani-header-drawer-button-bg {
+  height: 64px;
+  width: 64px;
+  border-radius: 64px;
+  background-color: rgba(0,0,0,0.2);
+  position: absolute;
+  opacity: 0;
+  transform-origin: 32px 32px;
+  transform: scale(0.1);
+  transition: all 500ms;
+}
+  .ani-header-drawer-button:hover .ani-header-drawer-button-bg{
+    opacity: 1;
+    transform-origin: 32px 32px;
+    transform: scale(0.9);
+  }
+.ani-header-drawer-button:active .ani-header-drawer-button-bg{
+  background-color: rgba(0,0,0,0.6);
 }
 </style>

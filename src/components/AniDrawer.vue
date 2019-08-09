@@ -14,6 +14,7 @@
         v-show="drawerOpen"
       >
         <div class="ani-drawer-close" @click="handleClickClose">
+          <div class="ani-drawer-close-solid-border"></div>
           <div class="ani-drawer-close__icon1"></div>
           <div class="ani-drawer-close__icon2"></div>
         </div>
@@ -126,5 +127,27 @@ export default {
   z-index: 4;
   left: 0;
   top: 0;
+}
+
+.ani-drawer-close-solid-border {
+  height: 30px;
+  width: 30px;
+  background-color:rgba(0,0,0,0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 15px 15px;
+  transform: scale(0.01);
+  border-radius: 30px;
+  opacity: 0;
+  transition: all 500ms;
+}
+  .ani-drawer-close:hover .ani-drawer-close-solid-border{
+    transform-origin: 15px 15px;
+    transform: scale(1.3);
+    opacity: 1;
+  }
+.ani-drawer-close:active .ani-drawer-close-solid-border{
+  background-color: rgba(0,0,0,0.6);
 }
 </style>

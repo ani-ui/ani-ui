@@ -35,7 +35,7 @@ export default {
   transition: all 500ms;
   user-select: none;
 }
-.ani-menu-title-span__style:hover {
-  padding-left: 24px;
+.ani-menu-item-title-style:hover .ani-menu-title-span__style{
+  padding-left: 32px;
 }
 </style>
