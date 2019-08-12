@@ -33,6 +33,8 @@ import AniRouterChoose from "../components/AniRouterChoose";
 import AniMenu from "../components/AniMenu/AniMenu";
 import AniMenuItem from "../components/AniMenu/AniMenuItem";
 import AniMenuTitle from "../components/AniMenu/AniMenuTitle";
+import AniInput from "../components/AniInput";
+import AniCounter from "../components/AniCounter";
 
 import "../less/main.less";
 import "../less/colorSchema.less";
@@ -70,7 +72,9 @@ const Components = {
   AniRouterChoose,
   AniMenu,
   AniMenuTitle,
-  AniMenuItem
+  AniMenuItem,
+  AniInput,
+  AniCounter
 };
 Vue.prototype.$message = Message;
 Object.keys(Components).forEach(name => {
