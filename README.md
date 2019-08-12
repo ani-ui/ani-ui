@@ -1,13 +1,12 @@
 # ani-ui
 Animate component for vue.js 2.0
 
-### [中文手册](./README_cn.md)
+### [中文 开始入手](./README_cn.md)
+### [Documentation(Only Chinese temporarily)](https://laiiihz.github.io/ani-ui)
 ![](./logo.png)
+
 ## Getting Started
-### using `npm` or `yarn`
-```shell script
-npm install ani-ui@latest
-```
+### using  `yarn`
 ```shell script
 yarn add ani-ui@latest
 ```
@@ -29,10 +28,23 @@ exp. face icon
 ```html
 <i class="material-icons">face</i>
 ```
+## Build The Latest Version
+### using `yarn` or `vue-cli-service`
+```shell script
+yarn output
+```
 
+```shell script
+vue-cli-service build --target lib --name ani-ui ./src/lib/index.js
+```
+> those two commands are same command
+> check it out in `$repo root dir`/dist 
 ## License
 ###  `GNU GENERAL PUBLIC LICENSE Version 3`
 view [License](./LICENSE) file
 
 ## Author
 [laiiihz](https://github.com/laiiihz)
+
+## Special Thanks
+none

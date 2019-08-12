@@ -1,12 +1,10 @@
 # ani-ui
 使用vue.js 2.0构建的动效组件
-### [English Docs](./README.md)
+### [English Version Getting Start](./README.md)
+### [使用文档(中文)](https://laiiihz.github.io/ani-ui)
 ![](./logo.png)
 ## 开始入手
-### 使用 `npm` 或 `yarn` 安装
-```shell script
-npm install ani-ui@latest
-```
+### 使用`yarn` 安装
 ```shell script
 yarn add ani-ui@latest
 ```
@@ -26,9 +24,25 @@ yarn add ani-ui@latest
 ```html
 <i class="material-icons">face</i>
 ```
+
+## 自行构建最新版本
+### 使用 `yarn` 或 `vue-cli-service` 命令
+```shell script
+yarn output
+```
+
+```shell script
+vue-cli-service build --target lib --name ani-ui ./src/lib/index.js
+```
+> 这两行命令是同一命令
+> 在`$repo root dir`/dist 中可查看构建的输出文件 
+
 ## 源代码许可
 ###  `GNU GENERAL PUBLIC LICENSE Version 3`
 查看 [源代码许可](./LICENSE) 文件
 
 ## 作者
 [laiiihz](https://github.com/laiiihz)
+
+## 特别感谢
+none
