@@ -29,6 +29,7 @@ import MenuDropDown from "./view/menus/MenuDropDown";
 import MenuRouterChoose from "./view/menus/MenuRouterChoose";
 import routerA from "./view/menus/RouterChoose/routerA";
 import routerB from "./view/menus/RouterChoose/routerB";
+import MenuInput from "./view/menus/MenuInput";
 
 Vue.use(Router);
 
@@ -62,6 +63,7 @@ export default new Router({
         { path: "pager", component: MenuPager, name: "pager" },
         { path: "rate", component: MenuRate, name: "rate" },
         { path: "dropdown", component: MenuDropDown, name: "dropdown" },
+        { path: "input", component: MenuInput, name: "input" },
         {
           path: "routerchoose",
           component: MenuRouterChoose,
