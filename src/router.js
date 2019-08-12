@@ -30,6 +30,7 @@ import MenuRouterChoose from "./view/menus/MenuRouterChoose";
 import routerA from "./view/menus/RouterChoose/routerA";
 import routerB from "./view/menus/RouterChoose/routerB";
 import MenuInput from "./view/menus/MenuInput";
+import MenuCounter from "./view/menus/MenuCounter";
 
 Vue.use(Router);
 
@@ -64,6 +65,7 @@ export default new Router({
         { path: "rate", component: MenuRate, name: "rate" },
         { path: "dropdown", component: MenuDropDown, name: "dropdown" },
         { path: "input", component: MenuInput, name: "input" },
+        { path: "counter", component: MenuCounter, name: "counter" },
         {
           path: "routerchoose",
           component: MenuRouterChoose,
