@@ -38,6 +38,7 @@ import AniCounter from "../components/AniCounter";
 import AniTimeNow from "../components/AniTimeNow";
 import AniParallax from "../components/AniParallax";
 import AniCarousel from "../components/AniCarousel";
+import AniCarouselItem from "../components/AniCarouselItem";
 
 import "../less/main.less";
 import "../less/colorSchema.less";
@@ -80,7 +81,8 @@ const Components = {
   AniCounter,
   AniTimeNow,
   AniParallax,
-  AniCarousel
+  AniCarousel,
+  AniCarouselItem
 };
 Vue.prototype.$message = Message;
 Object.keys(Components).forEach(name => {
