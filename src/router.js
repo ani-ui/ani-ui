@@ -33,6 +33,7 @@ import MenuInput from "./view/menus/MenuInput";
 import MenuCounter from "./view/menus/MenuCounter";
 import MenuTimeNow from "./view/menus/MenuTimeNow";
 import MenuParallax from "./view/menus/MenuParallax";
+import MenuCarousel from "./view/menus/MenuCarousel";
 
 Vue.use(Router);
 
@@ -70,6 +71,7 @@ export default new Router({
         { path: "counter", component: MenuCounter, name: "counter" },
         { path: "timeNow", component: MenuTimeNow, name: "timenow" },
         { path: "parallax", component: MenuParallax, name: "parallax" },
+        { path: "carousel", component: MenuCarousel, name: "carousel" },
         {
           path: "routerchoose",
           component: MenuRouterChoose,
