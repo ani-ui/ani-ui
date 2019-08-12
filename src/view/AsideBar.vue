@@ -27,6 +27,7 @@
     <ani-menu-item link="routerchoose">路由选择器</ani-menu-item>
     <ani-menu-item link="input">输入框</ani-menu-item>
     <ani-menu-item link="counter">计数器</ani-menu-item>
+    <ani-menu-item link="timenow">即时时间</ani-menu-item>
 
       <div style="height: 64px;"> </div>
   </ani-menu>
