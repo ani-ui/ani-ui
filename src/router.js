@@ -38,7 +38,7 @@ Vue.use(Router);
 
 export default new Router({
   routes: [
-    { path: "/", component: MainView },
+    { path: "/", component: MainView,name: 'home' },
     {
       path: "/component",
       component: ComponentView,
@@ -81,8 +81,8 @@ export default new Router({
         }
       ]
     },
-    { path: "/about", component: About },
-    { path: "/design", component: Design },
-    { path: "/*", component: NotFound }
+    { path: "/about", component: About,name:'about' },
+    { path: "/design", component: Design ,name:'design'},
+    { path: "/*", component: NotFound ,name:'notFound'}
   ]
 });

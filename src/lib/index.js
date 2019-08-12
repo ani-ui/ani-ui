@@ -35,6 +35,8 @@ import AniMenuItem from "../components/AniMenu/AniMenuItem";
 import AniMenuTitle from "../components/AniMenu/AniMenuTitle";
 import AniInput from "../components/AniInput";
 import AniCounter from "../components/AniCounter";
+import AniTimeNow from "../components/AniTimeNow";
+import AniParallax from "../components/AniParallax";
 
 import "../less/main.less";
 import "../less/colorSchema.less";
@@ -74,7 +76,9 @@ const Components = {
   AniMenuTitle,
   AniMenuItem,
   AniInput,
-  AniCounter
+  AniCounter,
+  AniTimeNow,
+  AniParallax
 };
 Vue.prototype.$message = Message;
 Object.keys(Components).forEach(name => {

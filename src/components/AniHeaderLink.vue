@@ -1,5 +1,5 @@
 <template>
-  <router-link v-if="router" :to="link">
+  <router-link v-if="router" :to="{name:link}">
     <div class="ani-header-link">
       <slot></slot>
     </div>
