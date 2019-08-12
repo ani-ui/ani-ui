@@ -54,6 +54,7 @@ export default {
   color: rgba(0, 0, 0, 0.8);
   line-height: 30px;
   text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.2);
 }
 .ani-show-code-arrow-down {
   transform:  translateX(40px);
