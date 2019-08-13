@@ -1,6 +1,7 @@
 <template>
   <div style="width: 90%">
     <h1>栅格系统</h1>
+    <h4>使用12栅格分隔区域</h4>
     <ani-row>
       <ani-col :col="12">
         <div class="black-box">12</div>
