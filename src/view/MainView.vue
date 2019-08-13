@@ -1,37 +1,30 @@
 <template>
   <div>
-    <div>
-      <ani-row>
-        <ani-col :col="12">
-          <ani-card style="min-width: 120px">
-            <div style="font-size:30px ">
-              <div style="display: inline-block">一套基于</div>
-              <div class="home-vue-title-style" style="display: inline-block">
-                Vue 2
-              </div>
-              <div style="display: inline-block">的动效组件库</div>
-            </div>
-          </ani-card>
-        </ani-col>
-        <ani-col :col="12">
-          <img
-            src="../assets/logo-main.png"
-            style="width: 80%;margin-left: 10%"
-            alt=""
-          />
-        </ani-col>
-      </ani-row>
-    </div>
+    <ani-card style="min-width: 120px;">
+      <div style="font-size:30px ">
+        <div style="display: inline-block">一套基于</div>
+        <div class="home-vue-title-style" style="display: inline-block">
+          Vue 2
+        </div>
+        <div style="display: inline-block">的动效组件库</div>
+      </div>
+    </ani-card>
+    <ani-parallax height="400" :image="require('../assets/parallax-1.webp')">
+      <div class="main-view-parallax__text">
+        <h1>Ani UI</h1>
+        <h2>Animate component for vue.js 2.0</h2>
+      </div>
+    </ani-parallax>
+    <div style="height: 1000px"></div>
   </div>
 </template>
 
 <script>
 import AniCard from "../components/AniCard";
-import AniCol from "../components/Col/src/AniCol";
-import AniRow from "../components/Row/src/AniRow";
+import AniParallax from "../components/AniParallax";
 export default {
   name: "MainView",
-  components: { AniCard, AniCol, AniRow }
+  components: { AniCard, AniParallax }
 };
 </script>
 
@@ -77,5 +70,15 @@ export default {
   to {
     color: red;
   }
+}
+
+.main-view-parallax__text {
+  color: white;
+  user-select: none;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.8));
+  transition: all 500ms;
+}
+.main-view-parallax__text:hover{
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 1));
 }
 </style>
