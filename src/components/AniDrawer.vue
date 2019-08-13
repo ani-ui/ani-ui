@@ -72,7 +72,8 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less">
+  @import "../less/main";
 .slide-fade-left-enter-active {
   transition: all 0.1s cubic-bezier(1, 0.5, 0.8, 1);
 }
@@ -124,7 +125,7 @@ export default {
 .ani-drawer-cap {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 4;
+  z-index:@drawerMaskZIndex;
   left: 0;
   top: 0;
 }

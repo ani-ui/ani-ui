@@ -44,14 +44,15 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="less">
+    @import "../less/main";
 .ani-dialog-style--main {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 10;
+  z-index: @dialogMaskZIndex;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -63,7 +64,7 @@ export default {
   left: 25%;
   background-color: white;
   border-radius: 15px;
-  z-index: 15;
+  z-index: @dialogZIndex;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     transition: all 500ms;
 }

@@ -20,7 +20,8 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="less">
+    @import "../less/main";
 .ani-bottom-bar-style {
   position: fixed;
   bottom: 0;
@@ -29,10 +30,8 @@ export default {
   width: 100%;
   height: 64px;
   background-color: white;
-    z-index: 10;
+    z-index: @bottomBarZIndex;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.ani-bottom-bar-children {
-}
 </style>
