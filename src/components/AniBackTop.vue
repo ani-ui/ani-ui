@@ -72,6 +72,7 @@ export default {
 
 <style scoped>
 .ani-back-top-style {
+  user-select: none;
   position: fixed;
   bottom: 20px;
   height: 48px;

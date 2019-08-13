@@ -20,6 +20,7 @@ export default {
   position: fixed;
   bottom: 20px;
   height: 48px;
+  user-select: none;
   border-radius: 48px;
   width: 48px;
   right: 20px;
