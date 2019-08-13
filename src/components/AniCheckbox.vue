@@ -108,7 +108,7 @@ export default {
     height: 40px;
     width:40px;
     left: 100%;
-    top: 100%;
+    top: 0;
     border-radius: 40px;
     background-color: rgba(0,0,0,0.2);
     opacity: 0;
