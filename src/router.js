@@ -37,6 +37,7 @@ import MenuCarousel from "./view/menus/MenuCarousel";
 import MenuTag from "./view/menus/MenuTag";
 import MenuBadge from "./view/menus/MenuBadge";
 import MenuFont from "./view/menus/MenuFont";
+import MenuSlider from "./view/menus/MenuSlider";
 
 Vue.use(Router);
 
@@ -78,6 +79,7 @@ export default new Router({
         { path: "tag", component: MenuTag, name: "tag" },
         { path: "badge", component: MenuBadge, name: "badge" },
         { path: "font", component: MenuFont, name: "font" },
+        { path: "slider", component: MenuSlider, name: "slider" },
         {
           path: "routerchoose",
           component: MenuRouterChoose,
