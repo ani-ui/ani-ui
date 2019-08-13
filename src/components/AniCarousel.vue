@@ -72,9 +72,21 @@ export default {
     },
     handleMouseEnter() {
       this.showArrows = true;
+      this.handleStop();
     },
     handleMouseLeave() {
       this.showArrows = false;
+      this.handleAutoPlay();
+    },
+    handleAutoPlay() {
+      this.timer = setInterval(() => {
+        if (this.items.length === this.current + 1)
+          this.$emit("update:current", 0);
+        else this.$emit("update:current", this.current + 1);
+      }, 3000);
+    },
+    handleStop() {
+      clearInterval(this.timer);
     },
     handleClickBottomLint(item) {
       this.direction = item - 1 < this.current;
@@ -90,11 +102,16 @@ export default {
     return {
       items: [],
       direction: false,
-      showArrows: false
+      showArrows: false,
+      timer: null
     };
   },
   mounted() {
     this.updateItem();
+    this.handleAutoPlay();
+  },
+  beforeDestroy() {
+    this.handleStop()
   }
 };
 </script>
