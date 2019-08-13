@@ -30,6 +30,8 @@
     <ani-menu-item link="timenow">即时时间</ani-menu-item>
     <ani-menu-item link="parallax">视差效果</ani-menu-item>
     <ani-menu-item link="carousel">轮播</ani-menu-item>
+    <ani-menu-item link="tag">标签</ani-menu-item>
+    <ani-menu-item link="badge">标记</ani-menu-item>
 
       <div style="height: 64px;"> </div>
   </ani-menu>
