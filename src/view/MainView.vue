@@ -15,6 +15,16 @@
         <h2>Animate component for vue.js 2.0</h2>
       </div>
     </ani-parallax>
+    <ani-parallax height="400" :image="require('../assets/parallax-2.webp')">
+      <div class="main-view-parallax__text">
+        <h1>Light Weight</h1>
+      </div>
+    </ani-parallax>
+    <ani-parallax height="400" :image="require('../assets/parallax-3.webp')">
+      <div class="main-view-parallax__text">
+        <h1>Stable</h1>
+      </div>
+    </ani-parallax>
     <div style="height: 1000px"></div>
   </div>
 </template>

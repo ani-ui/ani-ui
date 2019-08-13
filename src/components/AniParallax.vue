@@ -27,7 +27,6 @@ export default {
 .ani-parallax-style {
   width: 100%;
   position: relative;
-  display: inline-block;
   text-align: center;
   background-size: cover !important;
 }
