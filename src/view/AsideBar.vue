@@ -34,6 +34,7 @@
     <ani-menu-item link="carousel">轮播</ani-menu-item>
     <ani-menu-item link="tag">标签</ani-menu-item>
     <ani-menu-item link="badge">标记</ani-menu-item>
+    <ani-menu-item link="slider">滑动条</ani-menu-item>
 
       <div style="height: 64px;"> </div>
   </ani-menu>

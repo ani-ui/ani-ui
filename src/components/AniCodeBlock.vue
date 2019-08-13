@@ -50,6 +50,7 @@ export default {
 <style scoped>
 .ani-code-block--bottom {
   width: 100%;
+  user-select: none;
   height: 30px;
   color: rgba(0, 0, 0, 0.8);
   line-height: 30px;
