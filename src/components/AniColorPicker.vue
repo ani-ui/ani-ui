@@ -8,9 +8,58 @@
       <div
         v-if="colorPickerShow"
         class="ani-color-picker-body__style"
-        @mouseleave="colorPickerShow = false"
+        @mouseleave="colorPickerShow = true"
       >
-        <div class="ani-color-picker__panel__style"></div>
+        <div class="ani-color-picker__panel_bg__style"></div>
+        <div
+          class="ani-color-picker__panel__style"
+          :style="
+            `background-color: rgba(${red},${green},${blue},${transparent /
+              100.0});`
+          "
+        ></div>
+        <div style="position: absolute;top: 50%;width: 100%">
+          <div class="ani-color-picker-color__style">
+            <label>
+              <input
+                class="ani-color-picker-base__style"
+                type="range"
+                v-model="red"
+                max="255"
+              />
+            </label>
+          </div>
+          <div class="ani-color-picker-color__style">
+            <label>
+              <input
+                class="ani-color-picker-base__style"
+                type="range"
+                v-model="green"
+                max="255"
+              />
+            </label>
+          </div>
+          <div class="ani-color-picker-color__style">
+            <label>
+              <input
+                class="ani-color-picker-base__style"
+                type="range"
+                v-model="blue"
+                max="255"
+              />
+            </label>
+          </div>
+          <div class="ani-color-picker-color__style">
+            <label>
+              <input
+                class="ani-color-picker-base__style"
+                type="range"
+                v-model="transparent"
+                max="100"
+              />
+            </label>
+          </div>
+        </div>
       </div>
     </transition>
   </div>
@@ -21,7 +70,11 @@ export default {
   name: "AniColorPicker",
   data() {
     return {
-      colorPickerShow: true
+      colorPickerShow: true,
+      red: 0,
+      green: 0,
+      blue: 0,
+      transparent: 100.0
     };
   }
 };
@@ -52,6 +105,7 @@ export default {
   left: 0;
   border-radius: 10px;
   background-color: white;
+  overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -71,12 +125,38 @@ export default {
   opacity: 0;
 }
 
-.ani-color-picker__panel__style {
+.ani-color-picker__panel_bg__style {
   position: absolute;
   width: 100%;
   height: 50%;
   background: -webkit-linear-gradient(top, transparent 23px, #444444 24px),
     -webkit-linear-gradient(left, transparent 23px, #444444 24px);
   background-size: 24px 24px;
+}
+
+.ani-color-picker__panel__style {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+}
+
+.ani-color-picker-base__style {
+  appearance: none;
+  width: 100%;
+  outline: none;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  height: 10px;
+}
+.ani-color-picker-base__style::-webkit-slider-thumb{
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background-color:white;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+.ani-color-picker-color__style {
+  width: 100%;
 }
 </style>
