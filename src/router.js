@@ -39,6 +39,7 @@ import MenuBadge from "./view/menus/MenuBadge";
 import MenuFont from "./view/menus/MenuFont";
 import MenuSlider from "./view/menus/MenuSlider";
 import MenuColorPicker from "./view/menus/MenuColorPicker";
+import MenuCloud from "./view/menus/MenuCloud";
 
 Vue.use(Router);
 
@@ -82,6 +83,7 @@ export default new Router({
         { path: "font", component: MenuFont, name: "font" },
         { path: "slider", component: MenuSlider, name: "slider" },
         { path: "colorPicker", component: MenuColorPicker, name: "colorPicker" },
+        { path: "cloud", component: MenuCloud, name: "cloud" },
         {
           path: "routerchoose",
           component: MenuRouterChoose,
