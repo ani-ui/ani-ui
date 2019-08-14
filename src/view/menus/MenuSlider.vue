@@ -3,7 +3,7 @@
         <h1>ani-slider 滑动条</h1>
         <card-code-display title="基础使用">
             <ani-slider v-model="sliderValue"></ani-slider>
-            <h1>{{ sliderValue.toFixed(0) }}</h1>
+            <h1>{{ sliderValue }}</h1>
         </card-code-display>
     </div>
 </template>
