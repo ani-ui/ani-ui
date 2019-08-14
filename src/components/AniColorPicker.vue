@@ -60,6 +60,10 @@
             </label>
           </div>
         </div>
+          <div class="ani-color-picker-bottom-op_style">
+              <div class="ani-color-picker-bottom-op-button">取消</div>
+              <div class="ani-color-picker-bottom-op-button">确认</div>
+          </div>
       </div>
     </transition>
   </div>
@@ -76,6 +80,13 @@ export default {
       blue: 0,
       transparent: 100.0
     };
+  },
+    props:{
+      default:String,
+    },
+    mounted() {
+      let temp=this.default.toString()
+        temp.s
   }
 };
 </script>
@@ -158,5 +169,32 @@ export default {
 
 .ani-color-picker-color__style {
   width: 100%;
+}
+
+.ani-color-picker-bottom-op_style {
+    height: 25px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.ani-color-picker-bottom-op-button {
+    height: 25px;
+    width: 50%;
+    background-color: white;
+    display: inline-block;
+    text-align: center;
+    line-height: 25px;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    transition: all 500ms;
+    user-select: none;
+}
+.ani-color-picker-bottom-op-button:hover{
+    background-color: rgba(0,0,0,0.2);
+}
+.ani-color-picker-bottom-op-button:active{
+    background-color: rgba(0,0,0,0.6);
+    color: white;
 }
 </style>
