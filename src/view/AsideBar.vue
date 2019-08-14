@@ -7,6 +7,8 @@
     <ani-menu-item link="structure">框架</ani-menu-item>
     <ani-menu-item link="bottombar">底部导航栏</ani-menu-item>
     <ani-menu-item link="font">字体</ani-menu-item>
+    <ani-menu-title title="动画"></ani-menu-title>
+    <ani-menu-item link="animation">动画效果</ani-menu-item>
     <ani-menu-title title="基础组件"></ani-menu-title>
     <ani-menu-item link="button">按钮</ani-menu-item>
     <ani-menu-item link="switch">开关</ani-menu-item>
