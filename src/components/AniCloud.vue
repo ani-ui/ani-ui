@@ -61,7 +61,7 @@ export default {
           this.testValue = 0.01;
           this.reverseCloud = false;
         }
-      }, 20);
+      },16);
     }
   },
     beforeDestroy(){
