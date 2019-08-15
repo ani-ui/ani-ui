@@ -2,6 +2,10 @@
 使用vue.js 2.0构建的动效组件
 ### [English Version Getting Start](./README.md)
 ### [使用文档(中文)](https://laiiihz.github.io/ani-ui)
+
+![](https://npm.taobao.org/badge/d/ani-ui.svg) 
+![](https://npm.taobao.org/badge/v/ani-ui.svg?version=0.1.20)
+![npm (scoped)](https://img.shields.io/npm/v/ani-ui/latest?label=ani-ui%40latest)
 ![](./logo.png)
 ## 开始入手
 ### 使用`yarn` 安装

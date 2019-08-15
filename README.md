@@ -6,6 +6,7 @@ Animate component for vue.js 2.0
 
 ![](https://npm.taobao.org/badge/d/ani-ui.svg) 
 ![](https://npm.taobao.org/badge/v/ani-ui.svg?version=0.1.20)
+![npm (scoped)](https://img.shields.io/npm/v/ani-ui/latest?label=ani-ui%40latest)
 ![](./logo.png)
 
 ## Getting Started
