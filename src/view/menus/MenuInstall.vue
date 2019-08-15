@@ -23,7 +23,7 @@
     <h2>添加Material Icons</h2>
     <div>
       <ani-card>
-        <prism-editor language="markup" :code="codeFont"></prism-editor>
+        <prism-editor readonly language="markup" :code="codeFont"></prism-editor>
       </ani-card>
     </div>
   </div>
