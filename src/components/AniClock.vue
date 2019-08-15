@@ -24,7 +24,7 @@ export default {
           rotation: this.getHourAngle(),
           ease: Power3.easeInOut
       });
-    setInterval(() => {
+    this.timer=setInterval(() => {
       let temp = this.getSecondAngle();
       if (temp === 0) {
         TweenLite.to(this.$refs.second, 0.5, {
@@ -54,6 +54,9 @@ export default {
         });
     }, 1000);
   },
+  beforeDestroy(){
+    clearInterval(this.timer)
+  },
   methods: {
     getSecondAngle() {
       return (new Date().getSeconds() / 60.0) * 360.0;
@@ -66,7 +69,9 @@ export default {
       },
   },
   data() {
-    return {};
+    return {
+      timer:null,
+    };
   }
 };
 </script>

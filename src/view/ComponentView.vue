@@ -8,7 +8,7 @@
     <ani-main style="width: 400px">
       <ani-scroll-bar id="main-over" :style="`height: ${height}px;overflow-y: auto`">
         <transition name="fade" mode="out-in">
-          <router-view></router-view>
+          <router-view style="margin-left: 5%"></router-view>
         </transition>
       </ani-scroll-bar>
     </ani-main>
