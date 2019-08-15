@@ -3,10 +3,8 @@
         <h1>ani-weather 天气</h1>
         <card-code-display title="基础使用" >
             <div style="background-color:deepskyblue;">
-                <ani-weather type="cloudy"></ani-weather>
-                <ani-weather type="sunny"></ani-weather>
-                <ani-weather type="rain"></ani-weather>
-                <ani-weather type="snow"></ani-weather>
+                <ani-weather :type="weathers[weatherChoose]"></ani-weather>
+                <ani-button @click="handleClickWeather">NEXT</ani-button>
             </div>
         </card-code-display>
     </div>
@@ -15,9 +13,23 @@
 <script>
     import CardCodeDisplay from "../component/CardCodeDisplay";
     import AniWeather from "../../components/AniWeather";
+    import AniButton from "../../components/AniButton";
     export default {
         name: "MenuWeather",
-        components: {AniWeather, CardCodeDisplay}
+        components: {AniWeather, CardCodeDisplay,AniButton},
+        data(){
+            return {
+                weathers:['cloudy','sunny','rain','snow','hail'],
+                weatherChoose:0,
+            }
+        },
+        methods: {
+            handleClickWeather() {
+            if(this.weatherChoose+1<this.weathers.length){
+                this.weatherChoose++
+            }else this.weatherChoose=0
+            }
+        }
     }
 </script>
 
