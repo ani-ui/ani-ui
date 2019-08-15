@@ -44,6 +44,7 @@ import MenuAnimation from "./view/menus/MenuAnimation";
 import MenuWeather from "./view/menus/MenuWeather";
 import MenuClock from "./view/menus/MenuClock";
 import MenuPulse from "./view/menus/MenuPulse";
+import Preview from "./view/Preview";
 
 Vue.use(Router);
 
@@ -105,6 +106,7 @@ export default new Router({
     },
     { path: "/about", component: About,name:'about' },
     { path: "/design", component: Design ,name:'design'},
+    { path: "/preview", component: Preview,name:'preview'},
     { path: "/*", component: NotFound ,name:'notFound'}
   ]
 });
