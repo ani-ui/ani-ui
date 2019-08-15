@@ -42,6 +42,8 @@ import MenuColorPicker from "./view/menus/MenuColorPicker";
 import MenuCloud from "./view/menus/MenuCloud";
 import MenuAnimation from "./view/menus/MenuAnimation";
 import MenuWeather from "./view/menus/MenuWeather";
+import MenuClock from "./view/menus/MenuClock";
+import MenuPulse from "./view/menus/MenuPulse";
 
 Vue.use(Router);
 
@@ -88,6 +90,8 @@ export default new Router({
         { path: "cloud", component: MenuCloud, name: "cloud" },
         { path: "animation", component: MenuAnimation, name: "animation" },
         { path: "weather", component: MenuWeather, name: "weather" },
+        { path: "clock", component: MenuClock, name: "clock" },
+        { path: "pulse", component: MenuPulse, name: "pulse" },
         {
           path: "routerchoose",
           component: MenuRouterChoose,

@@ -41,6 +41,8 @@
     <ani-menu-title title="特效"></ani-menu-title>
     <ani-menu-item link="cloud">模拟云</ani-menu-item>
     <ani-menu-item link="weather">天气</ani-menu-item>
+    <ani-menu-item link="clock">模拟时钟</ani-menu-item>
+    <ani-menu-item link="pulse">脉冲</ani-menu-item>
 
       <div style="height: 64px;"> </div>
   </ani-menu>
