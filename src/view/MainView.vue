@@ -25,7 +25,21 @@
         <h1>Stable</h1>
       </div>
     </ani-parallax>
-    <div style="height: 1000px"></div>
+    <ani-parallax height="400" :image="require('../assets/parallax-4.webp')">
+      <div class="main-view-parallax__text">
+        <h1>Animation</h1>
+      </div>
+    </ani-parallax>
+    <ani-parallax height="400" :image="require('../assets/parallax-5.webp')">
+      <div class="main-view-parallax__text">
+        <h1>Special Effect</h1>
+      </div>
+    </ani-parallax>
+    <ani-parallax height="400" :image="require('../assets/parallax-6.webp')">
+      <div class="main-view-parallax__text">
+        <h1>Future</h1>
+      </div>
+    </ani-parallax>
   </div>
 </template>
 

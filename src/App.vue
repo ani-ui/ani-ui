@@ -13,7 +13,6 @@
       <ani-header-link router link="home">主页</ani-header-link>
       <ani-header-link router link="component">组件</ani-header-link>
       <ani-header-link router link="design">设计</ani-header-link>
-      <ani-header-link router link="preview">预览</ani-header-link>
       <ani-header-link router link="about">关于</ani-header-link>
       <ani-header-link link="https://github.com/laiiihz/ani-ui">
         <svg-github style="vertical-align: middle"></svg-github>

@@ -45,6 +45,8 @@ import AniColorPicker from "../components/AniColorPicker";
 import AniSlider from "../components/AniSlider";
 import AniCloud from "../components/AniCloud";
 import AniWeather from "../components/AniWeather";
+import AniClock from "../components/AniClock";
+import AniPulse from "../components/AniPulse";
 
 import "../less/main.less";
 import "../less/colorSchema.less";
@@ -94,7 +96,9 @@ const Components = {
   AniColorPicker,
   AniSlider,
   AniCloud,
-  AniWeather
+  AniWeather,
+  AniClock,
+  AniPulse
 };
 Vue.prototype.$message = Message;
 Object.keys(Components).forEach(name => {

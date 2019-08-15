@@ -44,18 +44,16 @@ import MenuAnimation from "./view/menus/MenuAnimation";
 import MenuWeather from "./view/menus/MenuWeather";
 import MenuClock from "./view/menus/MenuClock";
 import MenuPulse from "./view/menus/MenuPulse";
-import Preview from "./view/Preview";
-
 Vue.use(Router);
 
 export default new Router({
   routes: [
-    { path: "/", component: MainView,name: 'home' },
+    { path: "/", component: MainView, name: "home" },
     {
       path: "/component",
       component: ComponentView,
-      name:"component",
-      redirect:{name:'install'},
+      name: "component",
+      redirect: { name: "install" },
       children: [
         { path: "", component: MenuInstall, name: "install" },
         { path: "button", component: MenuButton, name: "button" },
@@ -87,7 +85,11 @@ export default new Router({
         { path: "badge", component: MenuBadge, name: "badge" },
         { path: "font", component: MenuFont, name: "font" },
         { path: "slider", component: MenuSlider, name: "slider" },
-        { path: "colorPicker", component: MenuColorPicker, name: "colorPicker" },
+        {
+          path: "colorPicker",
+          component: MenuColorPicker,
+          name: "colorPicker"
+        },
         { path: "cloud", component: MenuCloud, name: "cloud" },
         { path: "animation", component: MenuAnimation, name: "animation" },
         { path: "weather", component: MenuWeather, name: "weather" },
@@ -104,9 +106,8 @@ export default new Router({
         }
       ]
     },
-    { path: "/about", component: About,name:'about' },
-    { path: "/design", component: Design ,name:'design'},
-    { path: "/preview", component: Preview,name:'preview'},
-    { path: "/*", component: NotFound ,name:'notFound'}
+    { path: "/about", component: About, name: "about" },
+    { path: "/design", component: Design, name: "design" },
+    { path: "/*", component: NotFound, name: "notFound" }
   ]
 });

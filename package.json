@@ -1,6 +1,6 @@
 {
   "name": "ani-ui",
-  "version": "0.1.20",
+  "version": "0.1.21",
   "repository": {
     "type": "git",
     "url": "https://github.com/laiiihz/ani-ui.git"
@@ -16,19 +16,10 @@
   "main": "./dist/ani-ui.common.js",
   "files": [
     "dist/*",
-    "src/assets/woff/*",
-    "src/assets/woff2/*",
-    "src/assets/logo.png",
-    "src/components/*",
-    "src/font/*",
-    "src/less/*",
-    "src/lib/*",
-    "src/view/*",
-    "src/*.js",
-    "public/*",
     "*.json",
     "logo.png",
-    "*.js"
+    "*.js",
+    "*.md"
   ],
   "dependencies": {
     "core-js": "^2.6.5",
