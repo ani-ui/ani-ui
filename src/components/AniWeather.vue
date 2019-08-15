@@ -52,34 +52,19 @@ export default {
     };
   },
   mounted() {
-    switch (this.type) {
-      case "sunny":
-        this.sunny = true;
-        this.cloud = false;
-        this.topCloud = false;
-        this.rain = false;
-        this.snow = false;
-        this.hail = false;
-        break;
-      case "cloudy":
-        this.cloud = true;
-        break;
-      case "rain":
-        this.rain = true;
-        this.cloud = true;
-        this.topCloud = true;
-        break;
-      case "snow":
-        this.snow = true;
-        this.cloud = true;
-        this.topCloud = true;
-        break;
-      case "hail":
-        this.hail = true;
-        this.cloud = true;
-        this.topCloud = true;
-        break;
-    }
+    this.rain = this.type.includes("rain");
+    this.hail = this.type.includes("hail");
+    this.snow = this.type.includes("snow");
+    this.sunny = this.type.includes("sunny");
+    this.cloud =
+            this.type.includes("cloudy") ||
+            this.type.includes("rain") ||
+            this.type.includes("hail") ||
+            this.type.includes("snow");
+    this.topCloud =
+            this.type.includes("rain") ||
+            this.type.includes("hail") ||
+            this.type.includes("snow");
   }
 };
 </script>
