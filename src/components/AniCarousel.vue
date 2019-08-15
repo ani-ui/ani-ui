@@ -79,6 +79,7 @@ export default {
       this.handleAutoPlay();
     },
     handleAutoPlay() {
+      this.direction=false;
       this.timer = setInterval(() => {
         if (this.items.length === this.current + 1)
           this.$emit("update:current", 0);
