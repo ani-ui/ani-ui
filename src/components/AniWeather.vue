@@ -7,10 +7,13 @@
         this.topCloud ? 'ani-weather--top-cloud' : ''
       ]"
     ></div>
-    <div :class="[
-    this.rain ? 'ani-weather--rain' : '',
-    this.snow?'ani-weather--snow':'',
-    ]"></div>
+    <div
+      :class="[
+        this.rain ? 'ani-weather--rain' : '',
+        this.snow ? 'ani-weather--snow' : '',
+        this.hail ? 'ani-weather--hail' : ''
+      ]"
+    ></div>
   </div>
 </template>
 
@@ -22,39 +25,41 @@ export default {
   },
   watch: {
     type(value) {
-      switch (value) {
-        case "sunny":
-          this.sunny = true;
-          break;
-        case "cloudy":
-          this.cloud = true;
-          break;
-        case "rain":
-          this.rain = true;
-          this.cloud = true;
-          this.topCloud = true;
-          break;
-        case "snow":
-          this.snow = true;
-          this.cloud = true;
-          this.topCloud = true;
-          break;
-      }
+      this.rain = value.includes("rain");
+      this.hail = value.includes("hail");
+      this.snow = value.includes("snow");
+      this.sunny = value.includes("sunny");
+      this.cloud =
+        value.includes("cloudy") ||
+        value.includes("rain") ||
+        value.includes("hail") ||
+        value.includes("snow");
+      this.topCloud =
+        value.includes("rain") ||
+        value.includes("hail") ||
+        value.includes("snow");
     }
   },
   data() {
     return {
+        error:false,
       sunny: false,
       rain: false,
       snow: false,
       cloud: false,
-      topCloud: false
+      topCloud: false,
+      hail: false
     };
   },
   mounted() {
     switch (this.type) {
       case "sunny":
         this.sunny = true;
+        this.cloud = false;
+        this.topCloud = false;
+        this.rain = false;
+        this.snow = false;
+        this.hail = false;
         break;
       case "cloudy":
         this.cloud = true;
@@ -66,6 +71,11 @@ export default {
         break;
       case "snow":
         this.snow = true;
+        this.cloud = true;
+        this.topCloud = true;
+        break;
+      case "hail":
+        this.hail = true;
         this.cloud = true;
         this.topCloud = true;
         break;
@@ -121,15 +131,24 @@ export default {
   background-color: white;
   animation: 2s animate-rain infinite linear;
 }
-.ani-weather--snow{
-    position: absolute;
-    height: 10px;
-    width: 10px;
-    top: 35px;
-    left: 26px;
-    border-radius: 10px;
-    background-color: white;
-    animation: 2s animate-rain infinite linear;
+.ani-weather--snow {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: 35px;
+  left: 26px;
+  border-radius: 10px;
+  background-color: white;
+  animation: 2s animate-rain infinite linear;
+}
+.ani-weather--hail {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: 35px;
+  left: 26px;
+  background-color: white;
+  animation: 2s animate-rain infinite linear;
 }
 @keyframes animate-rain {
   from {
