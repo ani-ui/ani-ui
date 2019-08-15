@@ -3,6 +3,9 @@ Animate component for vue.js 2.0
 
 ### [中文 开始入手](./README_cn.md)
 ### [Documentation(Only Chinese temporarily)](https://laiiihz.github.io/ani-ui)
+
+![](https://npm.taobao.org/badge/d/ani-ui.svg) 
+![](https://npm.taobao.org/badge/v/ani-ui.svg?version=0.1.20)
 ![](./logo.png)
 
 ## Getting Started
