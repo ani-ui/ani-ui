@@ -1,9 +1,8 @@
 <template>
   <div style="height: 300px;width: 100%;position: relative;">
     <svg width="0" height="0">
-      <filter id="filter">
+      <filter :id="filterUUID">
         <feTurbulence
-          id="test"
           type="fractalNoise"
           :baseFrequency="`${testValue}`"
           numOctaves="4"
@@ -15,7 +14,7 @@
           in2=""
         ></feDisplacementMap>
       </filter>
-      <filter id="filter-mid">
+      <filter :id="filterMidUUID">
         <feTurbulence
           type="fractalNoise"
           :baseFrequency="`${testValue}`"
@@ -28,7 +27,7 @@
           in2=""
         ></feDisplacementMap>
       </filter>
-      <filter id="filter-front">
+      <filter :id="filterFrontUUID">
         <feTurbulence
           type="fractalNoise"
           :baseFrequency="`${testValue}`"
@@ -42,16 +41,23 @@
         ></feDisplacementMap>
       </filter>
     </svg>
-    <div class="ani-cloud-base__style" id="cloud-1"></div>
-    <div class="ani-cloud-base__style" id="cloud-2"></div>
-    <div class="ani-cloud-base__style" id="cloud-3"></div>
+    <div class="ani-cloud-base__style" ref="cloud1"></div>
+    <div class="ani-cloud-base__style" ref="cloud2"></div>
+    <div class="ani-cloud-base__style" ref="cloud3"></div>
   </div>
 </template>
 
 <script>
+const UUID = require('uuid/v4')
 export default {
   name: "AniCloud",
   mounted() {
+    this.filterUUID =  UUID();
+    this.filterMidUUID =  UUID();
+    this.filterFrontUUID =  UUID();
+    this.$refs.cloud1.style = `filter: url(#${this.filterUUID});left: -400px;  box-shadow: 400px 400px 30px 0 #fff;`;
+    this.$refs.cloud2.style = `left: -400px;  filter: url(#${this.filterMidUUID});  box-shadow: 400px 430px 60px -40px rgba(125, 125, 125, 0.5);`;
+    this.$refs.cloud3.style = ` left: -400px; filter: url(#${this.filterFrontUUID});  box-shadow: 400px 470px 60px -80px rgba(0, 0, 0, 1);`;
     if (this.animation) {
       let vthis = this;
       this.timer = requestAnimationFrame(function animateCloud() {
@@ -74,7 +80,10 @@ export default {
     return {
       testValue: 0.01,
       reverseCloud: false,
-      timer: 0
+      timer: 0,
+      filterUUID: "",
+      filterMidUUID: "",
+      filterFrontUUID: ""
     };
   },
   props: {
@@ -95,21 +104,5 @@ export default {
   border-radius: 50%;
   position: absolute;
   top: -400px;
-}
-#cloud-1 {
-  filter: url(#filter);
-  left: -400px;
-  box-shadow: 400px 400px 30px 0 #fff;
-}
-#cloud-2 {
-  left: -400px;
-  filter: url(#filter-mid);
-  box-shadow: 400px 430px 60px -40px rgba(125, 125, 125, 0.5);
-}
-
-#cloud-3 {
-  left: -400px;
-  filter: url(#filter-front);
-  box-shadow: 400px 470px 60px -80px rgba(0, 0, 0, 1);
 }
 </style>
