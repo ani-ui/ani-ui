@@ -40,6 +40,9 @@
       <div class="ani-menu-item-padding__style">
         <slot></slot>
       </div>
+      <div style="position: absolute;right: 16px;top: 0">
+        <span style="color: rgba(0,0,0,0.7)">{{ subTitle }}</span>
+      </div>
     </div>
   </div>
 </template>
@@ -49,7 +52,8 @@ export default {
   name: "AniMenuItem",
   inject: ["direct"], //to get direction(exp:this.direct.direction & this.direct.router)
   props: {
-    link: String
+    link: String,
+    subTitle:String,
   },
   methods: {
     handleClick() {
