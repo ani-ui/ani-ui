@@ -42,7 +42,7 @@ vue-cli-service build --target lib --name ani-ui ./src/lib/index.js
 > 在`$repo root dir`/dist 中可查看构建的输出文件 
 
 ## 源代码许可
-###  `GNU GENERAL PUBLIC LICENSE Version 3`
+###  `MIT LICENSE`
 查看 [源代码许可](./LICENSE) 文件
 
 ## 作者

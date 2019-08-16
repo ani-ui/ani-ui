@@ -44,7 +44,7 @@ vue-cli-service build --target lib --name ani-ui ./src/lib/index.js
 > those two commands are same command
 > check it out in `$repo root dir`/dist 
 ## License
-###  `GNU GENERAL PUBLIC LICENSE Version 3`
+###  `MIT LICENSE`
 view [License](./LICENSE) file
 
 ## Author
