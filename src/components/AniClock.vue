@@ -8,23 +8,23 @@
 </template>
 
 <script>
-import { TweenLite, Power3,Linear } from "gsap";
+import { TweenLite, Power3, Linear } from "gsap";
 export default {
   name: "AniClock",
   mounted() {
-      TweenLite.to(this.$refs.second, 0.5, {
-          rotation: this.getSecondAngle(),
-          ease: Power3.easeInOut
-      });
-      TweenLite.to(this.$refs.minute, 0.5, {
-      rotation:  this.getMinuteAngle(),
+    TweenLite.to(this.$refs.second, 0.5, {
+      rotation: this.getSecondAngle(),
       ease: Power3.easeInOut
     });
-      TweenLite.to(this.$refs.hour, 0.5, {
-          rotation: this.getHourAngle(),
-          ease: Power3.easeInOut
-      });
-    this.timer=setInterval(() => {
+    TweenLite.to(this.$refs.minute, 0.5, {
+      rotation: this.getMinuteAngle(),
+      ease: Power3.easeInOut
+    });
+    TweenLite.to(this.$refs.hour, 0.5, {
+      rotation: this.getHourAngle(),
+      ease: Power3.easeInOut
+    });
+    this.timer = setInterval(() => {
       let temp = this.getSecondAngle();
       if (temp === 0) {
         TweenLite.to(this.$refs.second, 0.5, {
@@ -35,11 +35,11 @@ export default {
           rotation: this.getMinuteAngle(),
           ease: Power3.easeInOut
         });
-        if(this.getMinuteAngle()===0){
-            TweenLite.to(this.$refs.hour, 0.5, {
-                rotation: this.getHourAngle(),
-                ease: Power3.easeInOut
-            });
+        if (this.getMinuteAngle() === 0) {
+          TweenLite.to(this.$refs.hour, 0.5, {
+            rotation: this.getHourAngle(),
+            ease: Power3.easeInOut
+          });
         }
         setTimeout(() => {
           TweenLite.to(this.$refs.second, 0.001, {
@@ -48,14 +48,14 @@ export default {
           });
         }, 500);
       } else
-        TweenLite.to(this.$refs.second,2, {
+        TweenLite.to(this.$refs.second, 2, {
           rotation: temp,
-          ease:Linear.ease,
+          ease: Linear.ease
         });
     }, 1000);
   },
-  beforeDestroy(){
-    clearInterval(this.timer)
+  beforeDestroy() {
+    clearInterval(this.timer);
   },
   methods: {
     getSecondAngle() {
@@ -64,13 +64,13 @@ export default {
     getMinuteAngle() {
       return (new Date().getMinutes() / 60.0) * 360.0;
     },
-      getHourAngle() {
-          return (new Date().getHours() / 120.0) * 360.0;
-      },
+    getHourAngle() {
+      return (new Date().getHours() / 120.0) * 360.0;
+    }
   },
   data() {
     return {
-      timer:null,
+      timer: null
     };
   }
 };

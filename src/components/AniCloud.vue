@@ -1,8 +1,8 @@
 <template>
   <div
     :style="{
-      height:'300px',
-      width: width?width:300 +'px',
+      height: '300px',
+      width: width ? width : 300 + 'px',
       position: 'relative'
     }"
   >
@@ -101,7 +101,7 @@ export default {
   props: {
     seed: {
       type: Number,
-      required: true,
+      required: true
     },
     animation: Boolean,
     width: Number
