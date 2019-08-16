@@ -1,8 +1,8 @@
 <template>
   <div
     :style="{
-      height:`${height?height:300}px`,
-      width: `${width?width:300}px`,
+      height:'300px',
+      width: width?width:300 +'px',
       position: 'relative'
     }"
   >
@@ -104,8 +104,7 @@ export default {
       required: true,
     },
     animation: Boolean,
-    width: Number,
-    height: Number
+    width: Number
   }
 };
 </script>
