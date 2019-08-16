@@ -26,9 +26,9 @@
             return{
                 apiChildren: [
                     {
-                        name: "seed",
+                        name: "*seed",
                         type: "Number(integer)",
-                        value: "1,2,3...",
+                        value: "",
                         describe: "种子"
                     },
                     {
@@ -36,6 +36,18 @@
                         type: "Boolean",
                         value: "true/false",
                         describe: "动画显示"
+                    },
+                    {
+                        name: "height",
+                        type: "Number",
+                        value: "300(px)",
+                        describe: "模拟云高度"
+                    },
+                    {
+                        name: "width",
+                        type: "Number",
+                        value: "300(px)",
+                        describe: "模拟云宽度"
                     },
                 ],
                 code:` <ani-cloud :seed="10" animation></ani-cloud>`
