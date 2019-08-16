@@ -13,6 +13,7 @@
         this.snow ? 'ani-weather--snow' : '',
         this.hail ? 'ani-weather--hail' : ''
       ]"
+      :style="`animation: ${speed?speed:1}s animate-rain infinite linear`"
     ></div>
     <div v-if="lightning" class="ani-cloud-lightning">
       <svg
@@ -37,7 +38,8 @@ export default {
   name: "AniWeather",
   props: {
     type: String,
-    lightning: Boolean
+    lightning: Boolean,
+    speed:Number,
   },
   watch: {
     type(value) {
@@ -130,7 +132,6 @@ export default {
   left: 28px;
   border-radius: 4px;
   background-color: white;
-  animation: 2s animate-rain infinite linear;
 }
 .ani-weather--snow {
   position: absolute;
