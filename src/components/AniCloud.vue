@@ -1,5 +1,11 @@
 <template>
-  <div style="height: 300px;width: 100%;position: relative;">
+  <div
+    :style="{
+      height:'300px',
+      width: width?width:300 +'px',
+      position: 'relative'
+    }"
+  >
     <svg width="0" height="0">
       <filter :id="filterUUID">
         <feTurbulence
@@ -48,21 +54,27 @@
 </template>
 
 <script>
-const UUID = require('uuid/v4')
+const UUID = require("uuid/v4");
 export default {
   name: "AniCloud",
   mounted() {
-    this.filterUUID =  UUID();
-    this.filterMidUUID =  UUID();
-    this.filterFrontUUID =  UUID();
-    this.$refs.cloud1.style = `filter: url(#${this.filterUUID});left: -400px;  box-shadow: 400px 400px 30px 0 #fff;`;
-    this.$refs.cloud2.style = `left: -400px;  filter: url(#${this.filterMidUUID});  box-shadow: 400px 430px 60px -40px rgba(125, 125, 125, 0.5);`;
-    this.$refs.cloud3.style = ` left: -400px; filter: url(#${this.filterFrontUUID});  box-shadow: 400px 470px 60px -80px rgba(0, 0, 0, 1);`;
+    this.filterUUID = UUID();
+    this.filterMidUUID = UUID();
+    this.filterFrontUUID = UUID();
+    this.$refs.cloud1.style = `filter: url(#${
+      this.filterUUID
+    });left: -400px;  box-shadow: 400px 400px 30px 0 #fff;`;
+    this.$refs.cloud2.style = `left: -400px;  filter: url(#${
+      this.filterMidUUID
+    });  box-shadow: 400px 430px 60px -40px rgba(125, 125, 125, 0.5);`;
+    this.$refs.cloud3.style = ` left: -400px; filter: url(#${
+      this.filterFrontUUID
+    });  box-shadow: 400px 470px 60px -80px rgba(0, 0, 0, 1);`;
     if (this.animation) {
       let vthis = this;
       this.timer = requestAnimationFrame(function animateCloud() {
         if (!vthis.reverseCloud) {
-          vthis.testValue += 0.000003;
+          vthis.testValue += 0.000005;
           if (vthis.testValue >= 0.02) vthis.reverseCloud = true;
           vthis.timer = requestAnimationFrame(animateCloud);
         } else {
@@ -89,9 +101,10 @@ export default {
   props: {
     seed: {
       type: Number,
-      required: true
+      required: true,
     },
-    animation: Boolean
+    animation: Boolean,
+    width: Number
   }
 };
 </script>
