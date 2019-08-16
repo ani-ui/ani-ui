@@ -14,6 +14,21 @@
         this.hail ? 'ani-weather--hail' : ''
       ]"
     ></div>
+    <div v-if="lightning" class="ani-cloud-lightning">
+      <svg
+        class="icon"
+        viewBox="0 0 1024 1024"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        width="48"
+        height="48"
+      >
+        <path
+          d="M434.897971 962.214818c-2.485611 0-4.357238-0.661056-5.599532-1.871627-8.714476-2.52552-11.821233-7.463995-9.335622-14.935154l57.877175-341.637937L225.804792 603.7701c-6.220678 0-10.577916-2.492774-13.071713-7.471159-3.727904-4.938476-3.106758-10.538007 1.871627-16.799618L602.920756 71.702042c4.978385-7.471159 10.577916-8.674567 16.799618-3.736091 6.220678 1.242294 9.335622 6.260587 9.335622 14.935154l-57.877175 341.646124L793.34269 424.547229c6.220678 0 10.577916 2.52552 13.071713 7.463995 1.242294 4.978385 1.242294 10.577916 0 16.806781L447.969685 956.615287C444.233594 960.343191 439.876356 962.214818 434.897971 962.214818z"
+          fill="#f4ea2a"
+        ></path>
+      </svg>
+    </div>
   </div>
 </template>
 
@@ -21,7 +36,8 @@
 export default {
   name: "AniWeather",
   props: {
-    type: String
+    type: String,
+    lightning: Boolean
   },
   watch: {
     type(value) {
@@ -42,7 +58,7 @@ export default {
   },
   data() {
     return {
-        error:false,
+      error: false,
       sunny: false,
       rain: false,
       snow: false,
@@ -57,14 +73,14 @@ export default {
     this.snow = this.type.includes("snow");
     this.sunny = this.type.includes("sunny");
     this.cloud =
-            this.type.includes("cloudy") ||
-            this.type.includes("rain") ||
-            this.type.includes("hail") ||
-            this.type.includes("snow");
+      this.type.includes("cloudy") ||
+      this.type.includes("rain") ||
+      this.type.includes("hail") ||
+      this.type.includes("snow");
     this.topCloud =
-            this.type.includes("rain") ||
-            this.type.includes("hail") ||
-            this.type.includes("snow");
+      this.type.includes("rain") ||
+      this.type.includes("hail") ||
+      this.type.includes("snow");
   }
 };
 </script>
@@ -173,6 +189,29 @@ export default {
   }
   50% {
     transform: translate(-50%, 11px);
+  }
+}
+
+.ani-cloud-lightning {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation:3s animate-lightning infinite ;
+}
+@keyframes animate-lightning {
+  from{
+    opacity: 1;
+  }
+  20%{
+    opacity: 1;
+    transform:translate(-50%, -50%) translateY(10px);
+  }
+  40%{
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
   }
 }
 </style>

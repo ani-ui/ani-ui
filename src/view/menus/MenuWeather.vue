@@ -4,7 +4,7 @@
         <card-code-display title="基础使用" :code="code" :js="codeJs">
             <div style="background-color:deepskyblue;">
                 <ani-weather :type="weathers[weatherChoose]"></ani-weather>
-                <ani-weather type="rain"></ani-weather>
+                <ani-weather type="rain" lightning></ani-weather>
                 <ani-button @click="handleClickWeather">NEXT</ani-button>
             </div>
         </card-code-display>
@@ -33,6 +33,12 @@
                         type: "String",
                         value: "sunny/rain/cloud/snow/hail",
                         describe: "天气类型"
+                    },
+                    {
+                        name: "lightning",
+                        type: "Boolean",
+                        value: "false",
+                        describe: "显示闪电"
                     },
                 ],
                 code:`<ani-weather :type="weathers[weatherChoose]"></ani-weather>`,
