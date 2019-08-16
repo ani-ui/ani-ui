@@ -129,12 +129,12 @@ export default {
     },
     handlePageUp(bool) {
       if (bool) {
-        this.emit("update:currentPage", this.currentPage++);
+        this.$emit("update:currentPage", this.currentPage+1);
       }
     },
     handlePageDown(bool) {
       if (bool) {
-        this.emit("update:currentPage", this.currentPage--);
+        this.$emit("update:currentPage", this.currentPage-1);
       }
     }
   },
