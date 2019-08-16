@@ -5,7 +5,11 @@
   </div>
   <div v-else class="ani-progress-circle-loading-style">
     <div class="circle-loading-inside-style">
-      <div class="circle-loading-inside-circle"></div>
+      <div class="circle-loading-inside-circle">
+        <div class="ani-progress-text-inside">
+          <span>{{ animatePercent.toFixed(0) }}</span>
+        </div>
+      </div>
     </div>
     <div v-if="loading" class="loading-inside-hidden"></div>
     <div v-else style="height: 140px;width: 140px;">
@@ -175,5 +179,12 @@ export default {
     transform-origin: 70px 70px;
     transform: rotate(405deg);
   }
+}
+
+.ani-progress-text-inside {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
 }
 </style>
