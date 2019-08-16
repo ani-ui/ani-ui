@@ -15,6 +15,7 @@
     <ani-menu-item link="checkbox">选框</ani-menu-item>
     <ani-menu-item link="input">输入框</ani-menu-item>
     <ani-menu-item link="dropdown">下拉菜单</ani-menu-item>
+    <ani-menu-item link="table">表格</ani-menu-item>
     <ani-menu-title title="特殊组件"></ani-menu-title>
     <ani-menu-item link="follower">鼠标跟随</ani-menu-item>
     <ani-menu-item link="drawer">抽屉</ani-menu-item>
@@ -43,8 +44,9 @@
     <ani-menu-item link="weather">天气</ani-menu-item>
     <ani-menu-item link="clock">模拟时钟</ani-menu-item>
     <ani-menu-item link="pulse">脉冲</ani-menu-item>
-
-      <div style="height: 64px;"> </div>
+    <ani-menu-item link="">
+      <i class="material-icons">favorite</i>
+    </ani-menu-item>
   </ani-menu>
 </template>
 <script>

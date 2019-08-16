@@ -44,6 +44,7 @@ import MenuAnimation from "./view/menus/MenuAnimation";
 import MenuWeather from "./view/menus/MenuWeather";
 import MenuClock from "./view/menus/MenuClock";
 import MenuPulse from "./view/menus/MenuPulse";
+import MenuTable from "./view/menus/MenuTable";
 Vue.use(Router);
 
 export default new Router({
@@ -85,6 +86,7 @@ export default new Router({
         { path: "badge", component: MenuBadge, name: "badge" },
         { path: "font", component: MenuFont, name: "font" },
         { path: "slider", component: MenuSlider, name: "slider" },
+        { path: "table", component: MenuTable, name: "table" },
         {
           path: "colorPicker",
           component: MenuColorPicker,
