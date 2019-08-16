@@ -197,3 +197,19 @@
     40px 25px rgba(0, 0, 0, 0.3), 20px 30px 0 2px rgba(0, 0, 0, 0.9);
   }
 }
+
+.ani-fancy-loading-eclipse {
+  height: 50px;
+  width: 50px;
+  position: relative;
+}
+.ani-fancy-loading-eclipse::after {
+  content: "";
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background-color: transparent;
+  position: absolute;
+  box-shadow: 2px 0 0 1px black;
+  animation: 1s animate-standard-rotate infinite linear;
+}
