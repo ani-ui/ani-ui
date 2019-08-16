@@ -73,6 +73,7 @@ export default {
     transform: rotate(360deg);
   }
 }
+
 .ani-fancy-loading-balls {
   height: 50px;
   width: 50px;
@@ -108,6 +109,7 @@ export default {
     box-shadow: 50px 30px black, 20px 0 black, 50px 0 black, 20px 30px black;
   }
 }
+
 .ani-fancy-loading-rec {
   height: 50px;
   width: 50px;
@@ -131,6 +133,115 @@ export default {
   }
   to {
     transform: rotateY(180deg) rotateX(180deg);
+  }
+}
+
+.ani-fancy-loading-3ball {
+  height: 50px;
+  width: 70px;
+  position: relative;
+  overflow: hidden;
+}
+.ani-fancy-loading-3ball::after {
+  content: "";
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  top: 50%;
+  left: -13px;
+  transform: translateY(-50%);
+  background-color: black;
+  position: absolute;
+  box-shadow: 13px 0 0 black, 26px 0 0 black, 39px 0 0 black;
+  animation: 0.5s animate-3ball-rotate infinite;
+}
+@keyframes animate-3ball-rotate {
+  from {
+    box-shadow: 26px 0 0 -5px black, 26px 0 black, 39px 0 black, 52px 0 black;
+  }
+  to {
+    box-shadow: 26px 0 black, 39px 0 black, 52px 0 black, 58px 0 0 -5px black;
+  }
+}
+
+.ani-fancy-loading-pulse {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  overflow: hidden;
+}
+.ani-fancy-loading-pulse::after {
+  content: "";
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -50%) scale(0);
+  animation: 1.5s animate-pulse-rotate infinite;
+}
+.ani-fancy-loading-pulse::before {
+  content: "";
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -50%);
+  animation: 1.5s animate-pulse-rotate infinite;
+  animation-delay: 0.5s;
+}
+@keyframes animate-pulse-rotate {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+
+.ani-fancy-loading-square-beat {
+  height: 50px;
+  width: 50px;
+  position: relative;
+}
+.ani-fancy-loading-square-beat::after {
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: -15px;
+  top: 0;
+  background-color: transparent;
+  position: absolute;
+  box-shadow: 20px 5px black, 45px 5px black, 20px 30px black, 45px 30px black;
+  animation: 1.5s animate-square-beat-rotate infinite reverse linear;
+}
+@keyframes animate-square-beat-rotate {
+  from {
+    box-shadow: 25px 10px rgba(0, 0, 0, 0.7), 40px 10px rgba(0, 0, 0, 0.5),
+      40px 25px rgba(0, 0, 0, 0.3), 20px 30px 0 2px rgba(0, 0, 0, 0.9);
+  }
+  25% {
+    box-shadow: 20px 5px 0 2px rgba(0, 0, 0, 0.9), 40px 10px rgba(0, 0, 0, 0.7),
+      40px 25px rgba(0, 0, 0, 0.5), 25px 25px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 25px 10px rgba(0, 0, 0, 0.3), 45px 5px 0 2px rgba(0, 0, 0, 0.9),
+      40px 25px rgba(0, 0, 0, 0.7), 25px 25px rgba(0, 0, 0, 0.5);
+  }
+  75% {
+    box-shadow: 25px 10px rgba(0, 0, 0, 0.5), 40px 10px rgba(0, 0, 0, 0.3),
+      45px 30px 0 2px rgba(0, 0, 0, 0.9), 25px 25px rgba(0, 0, 0, 0.7);
+  }
+  to {
+    box-shadow: 25px 10px rgba(0, 0, 0, 0.7), 40px 10px rgba(0, 0, 0, 0.5),
+      40px 25px rgba(0, 0, 0, 0.3), 20px 30px 0 2px rgba(0, 0, 0, 0.9);
   }
 }
 </style>
