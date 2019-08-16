@@ -21,7 +21,7 @@
 export default {
   name: "ApiChild",
   props: {
-    value:Object
+    value:Array
     // name: String,
     // type: String,
     // value: String,

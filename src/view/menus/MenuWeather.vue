@@ -4,6 +4,7 @@
         <card-code-display title="基础使用" :code="code" :js="codeJs">
             <div style="background-color:deepskyblue;">
                 <ani-weather :type="weathers[weatherChoose]"></ani-weather>
+                <ani-weather type="rain"></ani-weather>
                 <ani-button @click="handleClickWeather">NEXT</ani-button>
             </div>
         </card-code-display>

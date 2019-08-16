@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { TweenLite, Power3 } from "gsap";
+import { TweenLite, Power3,Linear } from "gsap";
 export default {
   name: "AniClock",
   mounted() {
@@ -48,9 +48,9 @@ export default {
           });
         }, 500);
       } else
-        TweenLite.to(this.$refs.second, 0.5, {
+        TweenLite.to(this.$refs.second,2, {
           rotation: temp,
-          ease: Power3.easeInOut
+          ease:Linear.ease,
         });
     }, 1000);
   },
@@ -99,7 +99,7 @@ export default {
 }
 
 .ani-clock--second {
-  height: 60px;
+  height: 65px;
   width: 4px;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -110,7 +110,7 @@ export default {
 }
 
 .ani-clock-minute {
-  height: 40px;
+  height: 45px;
   width: 6px;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -122,7 +122,7 @@ export default {
 }
 
 .ani-clock-hour {
-  height: 20px;
+  height: 25px;
   width: 8px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
