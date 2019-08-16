@@ -1,10 +1,17 @@
 <template>
   <div class="ani-pulse--base__style">
-    <div class="ani-pulse__style">
+    <div class="ani-pulse__style" v-if="!off">
       <div
-              v-if="!off"
+        v-for="item in count ? count : 1"
+        :key="item"
         class="ani-pulse__real"
-        :style="{ height: height, width: width,borderRadius:borderRadius }"
+        :style="{
+          height: height,
+          width: width,
+          borderRadius: borderRadius,
+          backgroundColor: color ? color : 'rgba(0,0,0,0.3)',
+          animationDelay: `${item * (delay ? delay : 0.1)}s`
+        }"
       ></div>
       <slot></slot>
     </div>
@@ -15,10 +22,22 @@
 export default {
   name: "AniPulse",
   props: {
-    height: String,
-    width: String,
-    borderRadius: String,
-      off:Boolean
+    height: {
+      type: String,
+      required: true
+    },
+    width: {
+      type: String,
+      required: true
+    },
+    borderRadius: {
+      type: String,
+      required: true
+    },
+    off: Boolean,
+    color: String,
+    count: Number,
+    delay: Number
   }
 };
 </script>
@@ -38,8 +57,7 @@ export default {
   position: absolute;
   left: 50%;
   top: 50%;
-  background-color: rgba(0, 0, 0, 0.4);
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.01);
   animation: 2s animate-pulse infinite;
 }
 @keyframes animate-pulse {
