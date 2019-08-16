@@ -73,6 +73,8 @@ export default {
     if (this.allPage <= 10) {
       this.rightMore = false;
     }
+    if(this.currentPage>=6)this.leftMore=true
+    if(this.allPage-this.currentPage<=5)this.rightMore=false
   },
   computed: {
     firstArrow() {

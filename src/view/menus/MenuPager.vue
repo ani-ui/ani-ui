@@ -15,7 +15,7 @@
         components: {AniPager, CardCodeDisplay},
         data(){
             return {
-                currentPage:1,
+                currentPage:10,
                 codePager:`<ani-pager :all-page="50" :current-page.sync="currentPage"></ani-pager>`,
                 codePagerJs:`data(){
         return {
