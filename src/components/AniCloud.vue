@@ -53,25 +53,28 @@ export default {
   name: "AniCloud",
   mounted() {
     if (this.animation) {
-      this.timer = setInterval(() => {
-        if (!this.reverseCloud) {
-          this.testValue += 0.000003;
-          if (this.testValue >= 0.02) this.reverseCloud = true;
+      let vthis = this;
+      this.timer = requestAnimationFrame(function animateCloud() {
+        if (!vthis.reverseCloud) {
+          vthis.testValue += 0.000003;
+          if (vthis.testValue >= 0.02) vthis.reverseCloud = true;
+          vthis.timer = requestAnimationFrame(animateCloud);
         } else {
-          this.testValue = 0.01;
-          this.reverseCloud = false;
+          vthis.testValue = 0.01;
+          vthis.reverseCloud = false;
+          vthis.timer = requestAnimationFrame(animateCloud);
         }
-      },16);
+      });
     }
   },
-    beforeDestroy(){
-      clearInterval(this.timer)
-    },
+  beforeDestroy() {
+    cancelAnimationFrame(this.timer);
+  },
   data() {
     return {
       testValue: 0.01,
       reverseCloud: false,
-      timer: null
+      timer: 0
     };
   },
   props: {
