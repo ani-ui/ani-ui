@@ -7,7 +7,9 @@
       }px;`
     "
   >
-    <div style="position: absolute;top: 50%;left:50%;transform: translate(-50%,-50%)">
+    <div
+      style="position: absolute;top: 50%;left:50%;transform: translate(-50%,-50%)"
+    >
       <slot></slot>
     </div>
   </div>
@@ -18,7 +20,7 @@ export default {
   name: "AniParallax",
   props: {
     image: String,
-    height: Number,
+    height: Number
   }
 };
 </script>

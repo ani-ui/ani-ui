@@ -1,6 +1,9 @@
 <template>
   <div>
-    <label class="ani-input-label-style" style="position: relative;overflow: hidden">
+    <label
+      class="ani-input-label-style"
+      style="position: relative;overflow: hidden"
+    >
       <input
         class="ani-input-main-style"
         :type="password ? (passwordShow ? 'text' : 'password') : 'text'"

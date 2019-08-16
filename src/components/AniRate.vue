@@ -7,7 +7,14 @@
       v-for="item in 5"
       :key="`${Math.random().toFixed(3)}rate${item}`"
     >
-      <div class="ani-rate-star-back-style" :style="`box-shadow: 0 0 10px ${item<=rate?'rgba(255,165,0,0.5);':'rgba(0,0,0,0.5);'}`"></div>
+      <div
+        class="ani-rate-star-back-style"
+        :style="
+          `box-shadow: 0 0 10px ${
+            item <= rate ? 'rgba(255,165,0,0.5);' : 'rgba(0,0,0,0.5);'
+          }`
+        "
+      ></div>
       <div class="ani-rate-star-svg">
         <svg
           width="16"
@@ -64,15 +71,15 @@ export default {
   position: absolute;
   height: 10px;
   width: 10px;
-    left: 3px;
-    top: 3px;
-    border-radius: 10px;
+  left: 3px;
+  top: 3px;
+  border-radius: 10px;
   background-color: transparent;
   z-index: 1;
 }
 
 .ani-rate-star-svg {
-    position: absolute;
+  position: absolute;
   z-index: 2;
 }
 </style>
