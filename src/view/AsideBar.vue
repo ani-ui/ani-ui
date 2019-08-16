@@ -39,6 +39,7 @@
     <ani-menu-item link="badge" sub-title="ani-badge">标记</ani-menu-item>
     <ani-menu-item link="slider" sub-title="ani-slider">滑动条</ani-menu-item>
     <ani-menu-item link="colorPicker" sub-title="ani-color-picker">拾色器</ani-menu-item>
+    <ani-menu-item link="fancyloading" sub-title="ani-fancy-loading">炫酷加载</ani-menu-item>
     <ani-menu-title title="特效"></ani-menu-title>
     <ani-menu-item link="cloud" sub-title="ani-cloud">模拟云</ani-menu-item>
     <ani-menu-item link="weather" sub-title="ani-weather">天气</ani-menu-item>
