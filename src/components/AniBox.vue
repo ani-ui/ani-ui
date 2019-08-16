@@ -16,6 +16,7 @@ export default {
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 5px;
   transition: all 500ms;
+  display: inline-block;
 }
 .ani-box-main-style:hover{
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
